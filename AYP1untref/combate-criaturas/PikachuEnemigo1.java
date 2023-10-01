@@ -14,7 +14,7 @@ public class PikachuEnemigo1 extends Criatura
     }
 
     public PikachuEnemigo1(String nombre) {
-        this(nombre, false);
+        this(nombre, true);
     }
 
     public void atacar2(Criatura otro) {
