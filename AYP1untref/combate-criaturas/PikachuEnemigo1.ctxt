@@ -17,4 +17,6 @@ comment7.params=otro
 comment7.target=void\ atacar4(Criatura)
 comment8.params=otro
 comment8.target=boolean\ puedeRealizarAtaque4En(Criatura)
-numComments=9
+comment9.params=atacante
+comment9.target=int\ recibirDa\u00F1o(Criatura)
+numComments=10

@@ -13,7 +13,7 @@ public abstract class Criatura extends Actor {
 
     protected int vida;
 
-    private UIInfoCriatura uiInfoCriatura;
+    protected UIInfoCriatura uiInfoCriatura;
 
     private boolean visualHover;
     private boolean visualSeleccionado;
