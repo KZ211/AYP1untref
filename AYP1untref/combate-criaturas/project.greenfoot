@@ -1,6 +1,6 @@
 #Greenfoot project file
 class.Pikachu.image=Pikachu.png
-class.Pikachu2.image=Pikachu.png
+class.Pikachu2.image=bee2.png
 class.PikachuEnemigo1.image=dolphin.png
 class.PikachuEnemigo2.image=Pikachu.png
 dependency1.from=UITurno
@@ -79,7 +79,11 @@ editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 height=791
+=======
+height=727
+>>>>>>> 6e38891afeccb78f55d38b66110b3e490e70d928
 package.numDependencies=24
 package.numTargets=16
 project.charset=UTF-8
@@ -209,7 +213,14 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1002
 world.lastInstantiated=PantallaDuelo
 xPosition=355
 yPosition=52
+=======
+width=1010
+world.lastInstantiated=PantallaDuelo
+xPosition=113
+yPosition=0
+>>>>>>> 6e38891afeccb78f55d38b66110b3e490e70d928
