@@ -97,7 +97,9 @@ public abstract class Criatura extends Actor {
         otro.recibirDaño(this);
     }
 
-    public abstract void atacar2(Criatura otro);
+    public void atacar2(Criatura otro){
+        otro.recibirDaño(this);
+    }
 
     public abstract void atacar3(Criatura otro);
 

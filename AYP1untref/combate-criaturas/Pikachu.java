@@ -13,7 +13,7 @@ public class Pikachu extends Criatura {
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return false;
+        return true;
     }
 
     public void atacar3(Criatura otro) {
