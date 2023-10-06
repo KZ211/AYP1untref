@@ -86,6 +86,10 @@ public abstract class Criatura extends Actor {
                     if (visualSeleccionado) {
                         highlight();
                     }
+                    //silueta de muerte
+                    if(vida==0){  
+                        imagenOriginal.silhouette();
+                    }
                     shadow();
                 }
             };
@@ -126,6 +130,10 @@ public abstract class Criatura extends Actor {
     }
 
     public int getVida() {
+        //para que la vida no baje de 0
+        if(vida<=0){  
+            vida=0;
+        }
         return vida;
     }
 
