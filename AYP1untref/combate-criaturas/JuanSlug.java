@@ -1,3 +1,5 @@
+//Franco Paragua
+
 public class JuanSlug extends Criatura {
     public JuanSlug(String nombre, boolean imagenEspejada) {
         super(
