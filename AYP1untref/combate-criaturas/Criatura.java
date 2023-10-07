@@ -125,11 +125,14 @@ public abstract class Criatura extends Actor {
 
     public abstract boolean puedeRealizarAtaque4En(Criatura otro);
 
+    //Numero random para aleatoriedad del ataque
     protected int rand(){
         int numeroAleatorio = (int) (Math.random() * 10 + 1);
         return numeroAleatorio;
     }
     
+    //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
+    //by: Alexis :D
     protected int recibirDaño(Criatura atacante) {
         int dañoFormula = 2*(atacante.estadisticas[0]/this.estadisticas[1])* 
         this.rand();
@@ -173,9 +176,9 @@ public abstract class Criatura extends Actor {
 
     public String getStats() {
         return nombre + " (" + this.getClass().getSimpleName() + ")\n" +
-        " - Ataque: 0\n" +
-        " - Defensa: 0\n" +
-        " - Velocidad: 0\n"
+        " - Ataque: " + estadisticas[0] + "\n" +
+        " - Defensa: " + estadisticas[1] + "\n" +
+        " - Velocidad: " + estadisticas[2] + "\n"
         ;
     }
 }

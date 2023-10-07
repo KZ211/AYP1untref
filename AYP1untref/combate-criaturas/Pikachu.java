@@ -3,10 +3,14 @@ public class Pikachu extends Criatura {
         super(
         nombre, 
         1000, 
-        new String[] { "Placaje", "- Vacío -","- Vacío -", "- Vacío -" }, 
+        new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" }, 
         imagenEspejada,
-        new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
-        new int[] {10,10,3});
+        new String[] { "Causa un daño moderado a un enemigo", 
+            "Golpea y aumenta el ataque x2, pero resta defensa"
+            ,
+            "Consume el 50% de la vida del enemigo para sumar tu ataque y atacar",
+            "Elimina un enemigo de un golpe, pero te resta un 500 de vida" },
+        new int[] {10,100,3});
     }
 
     public Pikachu(String nombre) {
@@ -19,6 +23,7 @@ public class Pikachu extends Criatura {
     
     public void atacar2(Criatura otro) {
         this.estadisticas[0] *= 2;
+        this.estadisticas[1] -= 10;
         otro.recibirDaño(this);
     }
 
@@ -36,6 +41,9 @@ public class Pikachu extends Criatura {
     }
 
     public void atacar4(Criatura otro) {
+        this.vida -= 500;
+        uiInfoCriatura.actualizar();
+        this.estadisticas[0] = otro.vida * 30;
         otro.recibirDaño(this);
     }
 
@@ -43,11 +51,4 @@ public class Pikachu extends Criatura {
         return true;
     }
     
-    public String getStats() {
-        return nombre + " (" + this.getClass().getSimpleName() + ")\n" +
-        " - Ataque: " + estadisticas[0] + "\n" +
-        " - Defensa: " + estadisticas[1] + "\n" +
-        " - Velocidad: " + estadisticas[2] + "\n"
-        ;
-    }
 }

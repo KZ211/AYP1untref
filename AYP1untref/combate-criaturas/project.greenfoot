@@ -1,8 +1,8 @@
 #Greenfoot project file
-class.Pikachu.image=Pikachu.png
-class.Pikachu2.image=Pikachu.png
-class.PikachuEnemigo1.image=dolphin.png
-class.PikachuEnemigo2.image=Pikachu.png
+class.Pikachu.image=juabslug-removebg-preview.png
+class.Pikachu2.image=martaslug-removebg-preview.png
+class.PikachuEnemigo1.image=ricardoslug-removebg-preview.png
+class.PikachuEnemigo2.image=ricardoslug-removebg-preview.png
 dependency1.from=UITurno
 dependency1.to=Criatura
 dependency1.type=UsesDependency

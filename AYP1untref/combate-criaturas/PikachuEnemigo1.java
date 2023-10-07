@@ -16,15 +16,19 @@ public class PikachuEnemigo1 extends Criatura
         new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" },
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
-        new int[] {10,10,3});
+        new int[] {10,100,3});
     }
 
     public PikachuEnemigo1(String nombre) {
         this(nombre, true);
     }
-
+    
+    public void atacar1(Criatura otro) {
+        otro.recibirDaño(this);
+    }
+    
     public void atacar2(Criatura otro) {
-        atacar1(otro);
+        otro.recibirDaño(this);
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
@@ -32,7 +36,7 @@ public class PikachuEnemigo1 extends Criatura
     }
 
     public void atacar3(Criatura otro) {
-        atacar1(otro);
+        otro.recibirDaño(this);
     }
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
@@ -40,7 +44,7 @@ public class PikachuEnemigo1 extends Criatura
     }
 
     public void atacar4(Criatura otro) {
-        atacar1(otro);
+        otro.recibirDaño(this);
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
