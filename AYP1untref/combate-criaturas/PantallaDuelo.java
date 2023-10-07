@@ -27,10 +27,10 @@ public class PantallaDuelo extends World {
     }
 
     private void agregarCriaturas() {
-        criaturas[0] = new Pikachu("Pikachu 1");
-        criaturas[1] = new Pikachu2("Pikachu 2");
-        criaturas[2] = new PikachuEnemigo1("Pikachu 3", true);
-        criaturas[3] = new PikachuEnemigo2("Pikachu 4", true);
+        criaturas[0] = new Pikachu("Juan Slug");
+        criaturas[1] = new Pikachu2("Marta Slug");
+        criaturas[2] = new PikachuEnemigo1("Ricardo 1", true);
+        criaturas[3] = new PikachuEnemigo2("Ricardo 2", true);
 
         addObject(criaturas[0], 100, 80);
         addObject(criaturas[1], 240, 80);
@@ -45,7 +45,8 @@ public class PantallaDuelo extends World {
 
     public void turno() {
         turno++;
-
+        
+        
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
         }

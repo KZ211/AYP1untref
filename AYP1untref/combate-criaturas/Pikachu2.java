@@ -11,7 +11,7 @@ public class Pikachu2 extends Criatura{
         super(
         nombre,
         1000,
-        new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" },
+        new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" },
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
         new int[] {10,100,3});
