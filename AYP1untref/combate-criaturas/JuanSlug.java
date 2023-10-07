@@ -1,5 +1,5 @@
-public class Pikachu extends Criatura {
-    public Pikachu(String nombre, boolean imagenEspejada) {
+public class JuanSlug extends Criatura {
+    public JuanSlug(String nombre, boolean imagenEspejada) {
         super(
         nombre, 
         1000, 
@@ -10,10 +10,10 @@ public class Pikachu extends Criatura {
             ,
             "Consume el 50% de la vida del enemigo para sumar tu ataque y atacar",
             "Elimina un enemigo de un golpe, pero te resta un 500 de vida" },
-        new int[] {10,100,3});
+        new int[] {50,100,3});
     }
 
-    public Pikachu(String nombre) {
+    public JuanSlug(String nombre) {
         this(nombre, false);
     }
 

@@ -18,6 +18,7 @@ public abstract class Criatura extends Actor {
 
     private boolean visualHover;
     private boolean visualSeleccionado;
+    public boolean statsEstaActivado;
 
     private final MyGreenfootImage imagenOriginal;
 

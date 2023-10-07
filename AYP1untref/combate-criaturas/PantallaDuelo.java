@@ -27,10 +27,10 @@ public class PantallaDuelo extends World {
     }
 
     private void agregarCriaturas() {
-        criaturas[0] = new Pikachu("Juan Slug");
-        criaturas[1] = new Pikachu2("Marta Slug");
-        criaturas[2] = new PikachuEnemigo1("Ricardo 1", true);
-        criaturas[3] = new PikachuEnemigo2("Ricardo 2", true);
+        criaturas[0] = new JuanSlug("Juan Slug");
+        criaturas[1] = new MartaSlug("Marta Slug");
+        criaturas[2] = new RicardoParagua("Ricardo Paragua", true);
+        criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
         addObject(criaturas[0], 100, 80);
         addObject(criaturas[1], 240, 80);
@@ -63,13 +63,13 @@ public class PantallaDuelo extends World {
     
     //cuando clikee una criatura va al siguiente turno
     public void click(Criatura c) {
-        if(c != criaturas[turno-1]){
-            uiAtaques.click(c);
+        uiAtaques.click(c);
+        if(c != criaturas[turno-1]) {
             turno();
         }
     }
 
     public void hover(Criatura c) {
-        uiAtaques.hover(c);
+            uiAtaques.hover(c);
     }
 }

@@ -1,24 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PikachuEnemigo2 here.
+ * Write a description of class Pikachu2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PikachuEnemigo2 extends Criatura
-{
-    public PikachuEnemigo2(String nombre, boolean imagenEspejada) {
+public class MartaSlug extends Criatura{
+     public MartaSlug(String nombre, boolean imagenEspejada) {
         super(
-        nombre, 
+        nombre,
         1000,
         new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" },
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
         new int[] {10,100,3});
     }
-
-    public PikachuEnemigo2(String nombre) {
+    
+    
+    public MartaSlug(String nombre) {
         this(nombre, false);
     }
 

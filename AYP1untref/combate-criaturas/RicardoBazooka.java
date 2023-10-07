@@ -1,17 +1,16 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class PikachuEnemigo1 here.
+ * Write a description of class PikachuEnemigo2 here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PikachuEnemigo1 extends Criatura
-{   
-    
-    public PikachuEnemigo1(String nombre, boolean imagenEspejada) {
+public class RicardoBazooka extends Criatura
+{
+    public RicardoBazooka(String nombre, boolean imagenEspejada) {
         super(
-        nombre,
+        nombre, 
         1000,
         new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" },
         imagenEspejada,
@@ -19,16 +18,12 @@ public class PikachuEnemigo1 extends Criatura
         new int[] {10,100,3});
     }
 
-    public PikachuEnemigo1(String nombre) {
-        this(nombre, true);
+    public RicardoBazooka(String nombre) {
+        this(nombre, false);
     }
-    
-    public void atacar1(Criatura otro) {
-        otro.recibirDaño(this);
-    }
-    
+
     public void atacar2(Criatura otro) {
-        otro.recibirDaño(this);
+        atacar1(otro);
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
@@ -36,7 +31,7 @@ public class PikachuEnemigo1 extends Criatura
     }
 
     public void atacar3(Criatura otro) {
-        otro.recibirDaño(this);
+        atacar1(otro);
     }
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
@@ -44,7 +39,7 @@ public class PikachuEnemigo1 extends Criatura
     }
 
     public void atacar4(Criatura otro) {
-        otro.recibirDaño(this);
+        atacar1(otro);
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
