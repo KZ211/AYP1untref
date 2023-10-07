@@ -8,6 +8,7 @@ public abstract class Criatura extends Actor {
 
     protected final String[] nombresAtaque;
     protected final String[] detallesAtaque;
+    protected final int[]    estadisticas;
 
     protected final boolean equipo1;
 
@@ -20,7 +21,7 @@ public abstract class Criatura extends Actor {
 
     private final MyGreenfootImage imagenOriginal;
 
-    public Criatura(String nombre, int vida, String[] nombresAtaque, boolean equipo1, String[] detallesAtaque) {
+    public Criatura(String nombre, int vida, String[] nombresAtaque, boolean equipo1, String[] detallesAtaque, int[] estadisticas) {
         this.nombre = nombre;
 
         this.vidaMaxima = vida;
@@ -36,6 +37,7 @@ public abstract class Criatura extends Actor {
         this.imagenOriginal.scale(130, 130);
 
         this.uiInfoCriatura = new UIInfoCriatura(this);
+        this.estadisticas = estadisticas;
     }
 
     @Override

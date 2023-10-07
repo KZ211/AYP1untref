@@ -9,8 +9,13 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class PikachuEnemigo2 extends Criatura
 {
     public PikachuEnemigo2(String nombre, boolean imagenEspejada) {
-        super(nombre, 21, new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" }, imagenEspejada,
-                new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" });
+        super(
+        nombre, 
+        21,
+        new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" },
+        imagenEspejada,
+        new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
+        new int[] {10,10,3});
     }
 
     public PikachuEnemigo2(String nombre) {
