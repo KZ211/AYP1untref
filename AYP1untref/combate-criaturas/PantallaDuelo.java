@@ -43,20 +43,30 @@ public class PantallaDuelo extends World {
         turno();
     }
 
+    //aumenta turno en 1 y valida que turno no sea mayor al numero de jugadores
+    //en ese caso resetea turno a 0 e inicia una nueva ronda
     public void turno() {
         turno++;
         
+        if (turno > criaturas.length) {
+            turno = 0;
+            ronda();
+        }
         
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
         }
-
+        
         turnoTexto.actualizarTexto("Ronda " + ronda + " | Turno " + turno);
-        uiAtaques.asignarCriaturaActual(criaturas[0]);
+        uiAtaques.asignarCriaturaActual(criaturas[turno-1]);
     }
-
+    
+    //cuando clikee una criatura va al siguiente turno
     public void click(Criatura c) {
-        uiAtaques.click(c);
+        if(c != criaturas[turno-1]){
+            uiAtaques.click(c);
+            turno();
+        }
     }
 
     public void hover(Criatura c) {
