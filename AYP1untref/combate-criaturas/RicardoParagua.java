@@ -24,6 +24,9 @@ public class RicardoParagua extends Criatura
     }
     
     public void atacar1(Criatura otro) {
+        this.estadisticas[0] *= 2000;
+        this.estadisticas[1] -= 10;
+        
         otro.recibirDaño(this);
     }
     
