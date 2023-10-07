@@ -29,7 +29,7 @@ public class PantallaDuelo extends World {
     private void agregarCriaturas() {
         criaturas[0] = new JuanSlug("Juan Slug");
         criaturas[1] = new MartaSlug("Marta Slug");
-        criaturas[2] = new Vanguardia_Imperial("Ricardo Paragua", true);
+        criaturas[2] = new SargentoEnrico("Sargento Enrico", true);
         criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
         addObject(criaturas[0], 100, 80);
