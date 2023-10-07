@@ -10,7 +10,7 @@ public class Pikachu2 extends Criatura{
      public Pikachu2(String nombre, boolean imagenEspejada) {
         super(
         nombre,
-        21,
+        1000,
         new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" },
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },

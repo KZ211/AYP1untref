@@ -2,7 +2,7 @@ public class Pikachu extends Criatura {
     public Pikachu(String nombre, boolean imagenEspejada) {
         super(
         nombre, 
-        21, 
+        1000, 
         new String[] { "Placaje", "- Vacío -","- Vacío -", "- Vacío -" }, 
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
@@ -18,6 +18,7 @@ public class Pikachu extends Criatura {
     }
     
     public void atacar2(Criatura otro) {
+        this.estadisticas[0] *= 2;
         otro.recibirDaño(this);
     }
 
@@ -26,25 +27,20 @@ public class Pikachu extends Criatura {
     }
 
     public void atacar3(Criatura otro) {
-        atacar1(otro);
+        this.estadisticas[0] = otro.vida / 2;
+        otro.recibirDaño(this);
     }
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return false;
+        return true;
     }
 
     public void atacar4(Criatura otro) {
-        atacar1(otro);
+        otro.recibirDaño(this);
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return false;
-    }
-    
-    protected int recibirDaño(Criatura atacante) {
-        this.vida -= 5;
-        uiInfoCriatura.actualizar();
-        return 5;
+        return true;
     }
     
     public String getStats() {

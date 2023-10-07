@@ -12,7 +12,7 @@ public class PikachuEnemigo1 extends Criatura
     public PikachuEnemigo1(String nombre, boolean imagenEspejada) {
         super(
         nombre,
-        21,
+        1000,
         new String[] { "Placaje", "- Vacío -", "- Vacío -", "- Vacío -" },
         imagenEspejada,
         new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
@@ -45,12 +45,5 @@ public class PikachuEnemigo1 extends Criatura
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
         return false;
-    }
-    
-    @Override
-    protected int recibirDaño(Criatura atacante) {
-        this.vida -= 20;
-        super.uiInfoCriatura.actualizar();
-        return 20;
     }
 }

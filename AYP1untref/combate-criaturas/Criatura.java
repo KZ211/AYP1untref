@@ -125,10 +125,17 @@ public abstract class Criatura extends Actor {
 
     public abstract boolean puedeRealizarAtaque4En(Criatura otro);
 
+    protected int rand(){
+        int numeroAleatorio = (int) (Math.random() * 10 + 1);
+        return numeroAleatorio;
+    }
+    
     protected int recibirDaño(Criatura atacante) {
-        this.vida -= 5;
+        int dañoFormula = 2*(atacante.estadisticas[0]/this.estadisticas[1])* 
+        this.rand();
+        this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();
-        return 5;
+        return dañoFormula;
     }
 
     public int getVida() {
