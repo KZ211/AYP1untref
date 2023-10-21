@@ -6,10 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Vanguardia_Imperial extends Criatura
+public class SargentoEnrico extends Criatura
 {   
 
-    public Vanguardia_Imperial(String nombre, boolean imagenEspejada) {
+    public SargentoEnrico(String nombre, boolean imagenEspejada) {
         super(
             nombre,
             2000,
@@ -19,7 +19,7 @@ public class Vanguardia_Imperial extends Criatura
             new int[] {10,175,3});
     }
 
-    public  Vanguardia_Imperial(String nombre) {
+    public  SargentoEnrico(String nombre) {
         this(nombre, true);
     }
 
