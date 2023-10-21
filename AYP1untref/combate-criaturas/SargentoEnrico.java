@@ -24,7 +24,7 @@ public class SargentoEnrico extends Criatura
     }
 
     public void atacar1(Criatura otro) {
-        this.estadisticas[0] += 20;
+        this.estadisticas[0] += 500;
 
         otro.recibirDaño(this);
     }
@@ -47,13 +47,10 @@ public class SargentoEnrico extends Criatura
 
         this.estadisticas[1]+=30;
         this.estadisticas[2]+=10;
-        this.vida+=20* super.rand();
+        super.curacion(otro);        
 
         otro.recibirDaño(this);
-        if(this.vida>this.vidaMaxima){
-            this.vida=this.vidaMaxima;
-        }
-        uiInfoCriatura.actualizar();
+        
 
     }
 
