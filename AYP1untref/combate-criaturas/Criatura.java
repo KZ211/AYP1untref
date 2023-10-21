@@ -132,6 +132,14 @@ public abstract class Criatura extends Actor {
         return numeroAleatorio;
     }
     
+    protected void curacion(Criatura otro){
+        this.vida+=20* rand();
+        if(this.vida>this.vidaMaxima){
+            this.vida=this.vidaMaxima;
+        }
+        uiInfoCriatura.actualizar();
+    
+    }
     //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
     //by: Alexis :D
     protected int recibirDaño(Criatura atacante) {
