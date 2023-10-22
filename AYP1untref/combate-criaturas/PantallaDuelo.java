@@ -50,14 +50,14 @@ public class PantallaDuelo extends World {
         turno++;
         personaje++;
         
-        if (personaje > criaturas.length-2) {
+        if (personaje > criaturas.length-1){
             turno = 0;
             personaje = -1;
             ronda();
         }
         
         if(criaturas[personaje].vida == 0){
-            if(personaje != 4){
+            if(personaje != 3){
                 personaje++;
             }else{
                 turno();
