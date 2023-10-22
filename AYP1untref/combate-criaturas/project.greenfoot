@@ -7,19 +7,7 @@ dependency1.from=UITurno
 dependency1.to=Criatura
 dependency1.type=UsesDependency
 dependency10.from=PantallaDuelo
-<<<<<<< HEAD
 dependency10.to=SargentoEnrico
-=======
-<<<<<<< HEAD
-dependency10.to=SargentoEnrico
-=======
-<<<<<<< HEAD
-dependency10.to=Vanguardia_Imperial
-=======
-dependency10.to=SargentoEnrico
->>>>>>> 748de55a903a858bbcf168abdc8548bfdb44fc4a
->>>>>>> 4e1aff1466f5cf1976ff85ef57e970370ad1252c
->>>>>>> c667e2fe3d517008e448e1bf57857d22bb8580e8
 dependency10.type=UsesDependency
 dependency11.from=PantallaDuelo
 dependency11.to=RicardoBazooka
@@ -87,31 +75,11 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaDuelo
 dependency9.to=MartaSlug
 dependency9.type=UsesDependency
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
-<<<<<<< HEAD
+editor.fx.0.height=916
+editor.fx.0.width=1616
+editor.fx.0.x=-8
+editor.fx.0.y=-8
 height=660
-=======
-<<<<<<< HEAD
-=======
-height=886
-=======
-editor.fx.0.height=739
-editor.fx.0.width=816
-<<<<<<< HEAD
-editor.fx.0.x=538
-editor.fx.0.y=14
-height=736
-=======
-editor.fx.0.x=392
-editor.fx.0.y=54
->>>>>>> 293b941e66e1d6c4f9a5e809c38ba9ea2406189e
-height=660
->>>>>>> 748de55a903a858bbcf168abdc8548bfdb44fc4a
->>>>>>> 4e1aff1466f5cf1976ff85ef57e970370ad1252c
->>>>>>> c667e2fe3d517008e448e1bf57857d22bb8580e8
 package.numDependencies=24
 package.numTargets=16
 project.charset=UTF-8
@@ -241,7 +209,7 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1382
+width=1044
 world.lastInstantiated=PantallaDuelo
-xPosition=0
-yPosition=0
+xPosition=303
+yPosition=145
