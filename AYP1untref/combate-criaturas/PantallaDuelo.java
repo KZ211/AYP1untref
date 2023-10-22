@@ -7,6 +7,7 @@ public class PantallaDuelo extends World {
 
     private int ronda = 0;
     private int turno = 0;
+    private int personaje = -1;
 
 
     public PantallaDuelo() {
@@ -47,25 +48,41 @@ public class PantallaDuelo extends World {
     //en ese caso resetea turno a 0 e inicia una nueva ronda
     public void turno() {
         turno++;
+        personaje++;
         
-        if (turno > criaturas.length) {
+        if (personaje > criaturas.length-2) {
             turno = 0;
+            personaje = -1;
             ronda();
+        }
+        
+        if(criaturas[personaje].vida == 0){
+            if(personaje != 4){
+                personaje++;
+            }else{
+                turno();
+            }
         }
         
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
         }
         
+        
         turnoTexto.actualizarTexto("Ronda " + ronda + " | Turno " + turno);
-        uiAtaques.asignarCriaturaActual(criaturas[turno-1]);
+        uiAtaques.asignarCriaturaActual(criaturas[personaje]);
     }
     
     //cuando clikee una criatura va al siguiente turno
     public void click(Criatura c) {
         uiAtaques.click(c);
-        if(c != criaturas[turno-1]) {
-            turno();
+        if(c != criaturas[this.personaje]) {
+            if(criaturas[0].vida==0 && criaturas[1].vida==0 || 
+                criaturas[2].vida==0 && criaturas[3].vida==0){
+                System.out.println("Ya hay ganador");
+            }else{
+                turno();
+            }
         }
     }
 
