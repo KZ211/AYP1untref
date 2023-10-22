@@ -75,11 +75,19 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaDuelo
 dependency9.to=MartaSlug
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=916
 editor.fx.0.width=1616
 editor.fx.0.x=-8
 editor.fx.0.y=-8
 height=660
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=179
+editor.fx.0.y=16
+height=736
+>>>>>>> ff5283f7719523f450575726a3ed2cb2fdb0f309
 package.numDependencies=24
 package.numTargets=16
 project.charset=UTF-8
@@ -209,7 +217,14 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1044
 world.lastInstantiated=PantallaDuelo
 xPosition=303
 yPosition=145
+=======
+width=1377
+world.lastInstantiated=PantallaDuelo
+xPosition=5
+yPosition=0
+>>>>>>> ff5283f7719523f450575726a3ed2cb2fdb0f309

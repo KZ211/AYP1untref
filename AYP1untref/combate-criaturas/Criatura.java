@@ -92,6 +92,7 @@ public abstract class Criatura extends Actor {
                     //silueta de muerte
                     if(vida==0){  
                         imagenOriginal.silhouette();
+                        uiInfoCriatura.actualizar();
                     }
                     shadow();
                 }
@@ -127,13 +128,13 @@ public abstract class Criatura extends Actor {
     public abstract boolean puedeRealizarAtaque4En(Criatura otro);
 
     //Numero random para aleatoriedad del ataque
-    protected int rand(){
-        int numeroAleatorio = (int) (Math.random() * 10 + 1);
+    protected double rand(){
+        double numeroAleatorio = (double) (Math.random() * (1.25 - 0.5) + 0.5);
         return numeroAleatorio;
     }
     
     protected void curacion(Criatura otro){
-        this.vida+=20* rand();
+        this.vida+=30* rand();
         if(this.vida>this.vidaMaxima){
             this.vida=this.vidaMaxima;
         }
@@ -142,8 +143,8 @@ public abstract class Criatura extends Actor {
     }
     //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
     //by: Alexis :D
-    protected int recibirDaño(Criatura atacante) {
-        int dañoFormula = 2*(atacante.estadisticas[0]/this.estadisticas[1])* 
+    protected double recibirDaño(Criatura atacante) {
+        double dañoFormula = 2*(1 + atacante.estadisticas[0]/this.estadisticas[1])* 
         this.rand();
         this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();

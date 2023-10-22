@@ -3,16 +3,16 @@
 public class JuanSlug extends Criatura {
     public JuanSlug(String nombre, boolean imagenEspejada) {
         super(
-        nombre, 
-        1000, 
-        new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" }, 
-        imagenEspejada,
-        new String[] { "Causa un daño moderado a un enemigo", 
-            "Golpea y aumenta el ataque x2, pero resta defensa"
+            nombre, 
+            55, 
+            new String[] { "- Puñetazo -", "- Patada -","- Granada -", "- Sniper -" }, 
+            imagenEspejada,
+            new String[] { "Causa un daño moderado a un enemigo", 
+                "Golpea y aumenta el ataque, pero resta defensa"
             ,
-            "Consume el 50% de la vida del enemigo para sumar tu ataque y atacar",
-            "Elimina un enemigo de un golpe, pero te resta un 500 de vida" },
-        new int[] {50,100,3});
+                "daña y aumenta tu defensa",
+                "hay probablidades de que falle y hacerte daño o causar daño verdadero igual a la mitad de tu ataque a un enemigo" },
+            new int[] {50,35,3});
     }
 
     public JuanSlug(String nombre) {
@@ -22,10 +22,10 @@ public class JuanSlug extends Criatura {
     public void atacar1(Criatura otro) {
         otro.recibirDaño(this);
     }
-    
+
     public void atacar2(Criatura otro) {
-        this.estadisticas[0] *= 2;
-        this.estadisticas[1] -= 10;
+        this.estadisticas[0] *= 1.25;
+        this.estadisticas[1] -= 5;
         otro.recibirDaño(this);
     }
 
@@ -34,7 +34,7 @@ public class JuanSlug extends Criatura {
     }
 
     public void atacar3(Criatura otro) {
-        this.estadisticas[0] = otro.vida / 2;
+        this.estadisticas[1] += 7;
         otro.recibirDaño(this);
     }
 
@@ -43,14 +43,19 @@ public class JuanSlug extends Criatura {
     }
 
     public void atacar4(Criatura otro) {
-        this.vida -= 500;
-        uiInfoCriatura.actualizar();
-        this.estadisticas[0] = otro.vida * 30;
-        otro.recibirDaño(this);
+        double numero = Math.random();
+        int dañoFormula = (this.estadisticas[0]/2);
+        if(numero > 0.65){
+            otro.vida -= dañoFormula;
+            otro.recibirDaño(this);
+        }else{
+            this.vida -= this.getVidaMaxima()*0.15;
+            uiInfoCriatura.actualizar();
+        }
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
         return true;
     }
-    
+
 }
