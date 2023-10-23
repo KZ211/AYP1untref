@@ -20,8 +20,14 @@ public class MartaSlug extends Criatura{
     public MartaSlug(String nombre) {
         this(nombre, false);
     }
-
+    
+    public void atacar1(Criatura otro){
+        this.criaturaAtaco = true;
+        otro.recibirDaño(this);
+    }
+    
     public void atacar2(Criatura otro) {
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
         if(this.vida == this.getVidaMaxima()){
             this.vida = this.vida;
@@ -31,11 +37,8 @@ public class MartaSlug extends Criatura{
         uiInfoCriatura.actualizar();
     }
 
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return true;
-    }
-
     public void atacar3(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[0] += 3;
         this.estadisticas[1] += 3;
         if(this.vida == this.getVidaMaxima()){
@@ -46,11 +49,8 @@ public class MartaSlug extends Criatura{
         uiInfoCriatura.actualizar();
     }
 
-    public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return true;
-    }
-
     public void atacar4(Criatura otro) {
+        this.criaturaAtaco = true;
          if(otro.vida == otro.getVidaMaxima()){
             otro.vida = otro.vida;
         }else{
@@ -59,9 +59,5 @@ public class MartaSlug extends Criatura{
         this.vida *= 0.80;
         this.uiInfoCriatura.actualizar();
         otro.uiInfoCriatura.actualizar();
-    }
-
-    public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return true;
     }
 }

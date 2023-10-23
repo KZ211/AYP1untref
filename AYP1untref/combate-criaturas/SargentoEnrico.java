@@ -24,43 +24,31 @@ public class SargentoEnrico extends Criatura
     }
 
     public void atacar1(Criatura otro) {
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
     }
 
-    public boolean puedeRealizarAtaque1En(Criatura otro) {
-        return true;
-    }
-
     public void atacar2(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[1] /= 1.25;
         this.estadisticas[2] /= 1.25;
         super.curacion(otro);
-
-    }
-
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return true;
     }
 
     public void atacar3(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[1]+= 4;
         otro.recibirDaño(this);
                
     }
 
-    public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return true;
-    }
-
     public void atacar4(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[0]+=5;
         this.estadisticas[1]+=5;
 
         otro.recibirDaño(this);
         this.vida -= this.getVidaMaxima()*0.10;
         uiInfoCriatura.actualizar();
-    }
-    public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return true;
     }
 }
