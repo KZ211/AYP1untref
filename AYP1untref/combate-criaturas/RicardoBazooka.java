@@ -24,32 +24,24 @@ public class RicardoBazooka extends Criatura
     }
 
     public void atacar1(Criatura otro) {
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
     }
 
-    public boolean puedeRealizarAtaque1En(Criatura otro) {
-        return true;
-    }
-
     public void atacar2(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[0] += 8;
     }
 
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return true;
-    }
-
     public void atacar3(Criatura otro) {
+        this.criaturaAtaco = true;
         otro.estadisticas[1]-= 4;
         otro.recibirDaño(this);
 
     }
 
-    public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return true;
-    }
-
     public void atacar4(Criatura otro) {
+        this.criaturaAtaco = true;
         int vidaEnm = otro.vida;
         if(otro.vida == otro.getVidaMaxima() || this.vida == this.getVidaMaxima()){
             this.vida = this.vida;
@@ -61,9 +53,5 @@ public class RicardoBazooka extends Criatura
         this.estadisticas[0] = 1;
         this.uiInfoCriatura.actualizar();
         otro.uiInfoCriatura.actualizar();
-    }
-
-    public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return true;
     }
 }

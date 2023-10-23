@@ -20,29 +20,25 @@ public class JuanSlug extends Criatura {
     }
 
     public void atacar1(Criatura otro) {
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
     }
 
     public void atacar2(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[0] *= 1.25;
         this.estadisticas[1] -= 5;
         otro.recibirDaño(this);
     }
 
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return true;
-    }
-
     public void atacar3(Criatura otro) {
+        this.criaturaAtaco = true;
         this.estadisticas[1] += 7;
         otro.recibirDaño(this);
     }
 
-    public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return true;
-    }
-
     public void atacar4(Criatura otro) {
+        this.criaturaAtaco = true;
         double numero = Math.random();
         int dañoFormula = (this.estadisticas[0]/2);
         if(numero > 0.65){

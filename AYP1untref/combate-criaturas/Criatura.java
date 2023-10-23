@@ -13,6 +13,7 @@ public abstract class Criatura extends Actor {
     protected final boolean equipo1;
 
     protected int vida;
+    protected boolean criaturaAtaco;
 
     protected UIInfoCriatura uiInfoCriatura;
 
@@ -101,7 +102,7 @@ public abstract class Criatura extends Actor {
         setImage(nuevaImagen);
     }
 
-    public void atacar1(Criatura otro) {
+    public void atacar1(Criatura otro){
         otro.recibirDaño(this);
     }
 
@@ -121,11 +122,17 @@ public abstract class Criatura extends Actor {
         return !esDelMismoEquipoQue(otro);
     }
 
-    public abstract boolean puedeRealizarAtaque2En(Criatura otro);
+    public boolean puedeRealizarAtaque2En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque3En(Criatura otro);
+    public boolean puedeRealizarAtaque3En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque4En(Criatura otro);
+    public boolean puedeRealizarAtaque4En(Criatura otro){
+       return !esDelMismoEquipoQue(otro);
+    }
 
     //Numero random para aleatoriedad del ataque
     protected double rand(){
