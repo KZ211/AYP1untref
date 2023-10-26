@@ -12,11 +12,11 @@ public class SargentoEnrico extends Criatura
     public SargentoEnrico(String nombre, boolean imagenEspejada) {
         super(
             nombre,
-            2000,
+            60,
             new String[] { "-Machetazo  -", "- No me dolió -","- Grito de Guerra -", "- Reprimir -" },
             imagenEspejada,
-            new String[] { "Causa un daño moderado a un enemigo", "Aumenta la defensa base x2", "Aumenta las estadisticas bases", "Causa un daño moderado y aumenta la armadura base" },
-            new int[] {10,175,3});
+            new String[] { "Causa un daño moderado a un enemigo", "Te cura pero disminuye tu ataque y defensa", "Hace daño y aumenta tu defensa", "Hace daño y aumenta muy poco tu ataque y defensa a cambio de un poco de tu vida" },
+            new int[] {25, 55,3});
     }
 
     public  SargentoEnrico(String nombre) {
@@ -24,17 +24,13 @@ public class SargentoEnrico extends Criatura
     }
 
     public void atacar1(Criatura otro) {
-        this.estadisticas[0] += 500;
-
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
         super.imprimirMensaje(otro,0);
     }
 
-    public boolean puedeRealizarAtaque1En(Criatura otro) {
-        return true;
-    }
-
     public void atacar2(Criatura otro) {
+<<<<<<< HEAD
         this.estadisticas[1]*=2;
         otro.recibirDaño(this);
         super.imprimirMensaje(otro,1);
@@ -58,18 +54,29 @@ public class SargentoEnrico extends Criatura
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
         return true;
+=======
+        this.criaturaAtaco = true;
+        this.estadisticas[1] /= 1.25;
+        this.estadisticas[2] /= 1.25;
+        super.curacion(otro);
+    }
+
+    public void atacar3(Criatura otro) {
+        this.criaturaAtaco = true;
+        this.estadisticas[1]+= 4;
+        otro.recibirDaño(this);
+               
+>>>>>>> cd386784124023289aa9c20282096f50e323046a
     }
 
     public void atacar4(Criatura otro) {
-        this.estadisticas[0]+=30;
-        this.estadisticas[1]+=50;
+        this.criaturaAtaco = true;
+        this.estadisticas[0]+=5;
+        this.estadisticas[1]+=5;
 
         otro.recibirDaño(this);
-
+        this.vida -= this.getVidaMaxima()*0.10;
         uiInfoCriatura.actualizar();
         super.imprimirMensaje(otro,3);
-    }
-    public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return true;
     }
 }

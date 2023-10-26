@@ -11,6 +11,7 @@ comment12.target=boolean\ esDelMismoEquipoQue(Criatura)
 comment13.params=otro
 comment13.target=boolean\ puedeRealizarAtaque1En(Criatura)
 comment14.params=otro
+<<<<<<< HEAD
 comment14.target=boolean\ puedeRealizarAtaque2En(Criatura)
 comment15.params=otro
 comment15.target=boolean\ puedeRealizarAtaque3En(Criatura)
@@ -22,6 +23,19 @@ comment18.params=otro
 comment18.target=void\ curacion(Criatura)
 comment19.params=atacante
 comment19.target=int\ recibirDa\u00F1o(Criatura)
+=======
+comment14.target=boolean\ puedeRealizarAtaque4En(Criatura)
+comment15.params=
+comment15.target=double\ rand()
+comment16.params=otro
+comment16.target=void\ curacion(Criatura)
+comment17.params=atacante
+comment17.target=double\ recibirDa\u00F1o(Criatura)
+comment18.params=
+comment18.target=int\ getVida()
+comment19.params=
+comment19.target=int\ getVidaMaxima()
+>>>>>>> cd386784124023289aa9c20282096f50e323046a
 comment2.params=world
 comment2.target=void\ addedToWorld(greenfoot.World)
 comment20.params=

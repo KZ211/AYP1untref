@@ -13,6 +13,7 @@ public abstract class Criatura extends Actor {
     protected final boolean equipo1;
 
     protected int vida;
+    protected boolean criaturaAtaco;
 
     protected UIInfoCriatura uiInfoCriatura;
 
@@ -92,6 +93,7 @@ public abstract class Criatura extends Actor {
                     //silueta de muerte
                     if(vida==0){  
                         imagenOriginal.silhouette();
+                        uiInfoCriatura.actualizar();
                     }
                     shadow();
                 }
@@ -100,6 +102,7 @@ public abstract class Criatura extends Actor {
         setImage(nuevaImagen);
     }
 
+<<<<<<< HEAD
     protected void imprimirMensaje(Criatura otro, int i){
         System.out.println( this.nombre + " ataco con "  + nombresAtaque[i] + " a " + otro + " y causo " + otro.recibirDaño(this) );
     }
@@ -109,6 +112,9 @@ public abstract class Criatura extends Actor {
     }
 
     public void atacar1(Criatura otro) {
+=======
+    public void atacar1(Criatura otro){
+>>>>>>> cd386784124023289aa9c20282096f50e323046a
         otro.recibirDaño(this);
 
     }
@@ -130,20 +136,26 @@ public abstract class Criatura extends Actor {
         return !esDelMismoEquipoQue(otro);
     }
 
-    public abstract boolean puedeRealizarAtaque2En(Criatura otro);
+    public boolean puedeRealizarAtaque2En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque3En(Criatura otro);
+    public boolean puedeRealizarAtaque3En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque4En(Criatura otro);
+    public boolean puedeRealizarAtaque4En(Criatura otro){
+       return !esDelMismoEquipoQue(otro);
+    }
 
     //Numero random para aleatoriedad del ataque
-    protected int rand(){
-        int numeroAleatorio = (int) (Math.random() * 10 + 1);
+    protected double rand(){
+        double numeroAleatorio = (double) (Math.random() * (1.25 - 0.5) + 0.5);
         return numeroAleatorio;
     }
 
     protected void curacion(Criatura otro){
-        this.vida+=20* rand();
+        this.vida+=30* rand();
         if(this.vida>this.vidaMaxima){
             this.vida=this.vidaMaxima;
         }
@@ -152,9 +164,15 @@ public abstract class Criatura extends Actor {
     }
     //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
     //by: Alexis :D
+<<<<<<< HEAD
     protected int recibirDaño(Criatura atacante) {
         int dañoFormula = 2*(atacante.estadisticas[0]/this.estadisticas[1])* 
             this.rand();
+=======
+    protected double recibirDaño(Criatura atacante) {
+        double dañoFormula = 2*(1 + atacante.estadisticas[0]/this.estadisticas[1])* 
+        this.rand();
+>>>>>>> cd386784124023289aa9c20282096f50e323046a
         this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();
         return dañoFormula;
