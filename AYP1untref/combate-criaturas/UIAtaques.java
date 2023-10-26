@@ -59,7 +59,7 @@ public class UIAtaques extends Actor {
         if (botonSeleccionado == null) {
             descripcion.setText(c.getStats());
         }
-        if (ataque != null && esEquipo1(c)) {
+        if (ataque != null ) {
             ataque.run();
         }
     }
