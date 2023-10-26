@@ -40,6 +40,9 @@ public class SargentoEnrico extends Criatura
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
+        if(otro.esEquipo1()){
+            return false;    
+          }
         return true;
     }
 

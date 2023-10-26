@@ -120,11 +120,17 @@ public abstract class Criatura extends Actor {
         return !esDelMismoEquipoQue(otro);
     }
 
-    public abstract boolean puedeRealizarAtaque2En(Criatura otro);
+    public boolean puedeRealizarAtaque2En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque3En(Criatura otro);
+    public boolean puedeRealizarAtaque3En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
-    public abstract boolean puedeRealizarAtaque4En(Criatura otro);
+    public boolean puedeRealizarAtaque4En(Criatura otro){
+        return !esDelMismoEquipoQue(otro);
+    }
 
     //Numero random para aleatoriedad del ataque
     protected int rand(){
