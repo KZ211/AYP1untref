@@ -102,15 +102,7 @@ public abstract class Criatura extends Actor {
         setImage(nuevaImagen);
     }
 
-    protected void imprimirMensaje(Criatura otro, int i){
-        System.out.println( this.nombre + " ataco con "  + nombresAtaque[i] + " a " + otro + " y causo " + otro.recibirDaño(this) );
-    }
-
-    protected void imprimirMensaje2(Criatura otro,int i){
-        System.out.println(this.nombre + " activo " +nombresAtaque[i] + " y su salud se regenera a  " + this.vida);
-    }
-
-    public void atacar1(Criatura otro) {
+    public void atacar1(Criatura otro){
         otro.recibirDaño(this);
 
     }
@@ -160,9 +152,9 @@ public abstract class Criatura extends Actor {
     }
     //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
     //by: Alexis :D
-    protected int recibirDaño(Criatura atacante) {
-        int dañoFormula = 2*(atacante.estadisticas[0]/this.estadisticas[1])* 
-            this.rand();
+    protected double recibirDaño(Criatura atacante) {
+        double dañoFormula = 2*(1 + atacante.estadisticas[0]/this.estadisticas[1])* 
+        this.rand();
         this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();
         return dañoFormula;

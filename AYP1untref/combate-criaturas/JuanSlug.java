@@ -19,20 +19,12 @@ public class JuanSlug extends Criatura {
         this(nombre, false);
         
     }
-
-    public void atacar1(Criatura otro) {
+    
+    public void atacar1(Criatura otro){
+        this.criaturaAtaco = true;
         otro.recibirDaño(this);
-        super.imprimirMensaje(otro,0);
-        
     }
     
-    public void atacar2(Criatura otro) {
-        this.estadisticas[0] *= 2;
-        this.estadisticas[1] -= 10;
-        otro.recibirDaño(this);
-        super.imprimirMensaje(otro,1);
-    }
-
     public void atacar2(Criatura otro) {
         this.criaturaAtaco = true;
         this.estadisticas[0] *= 1.25;
@@ -44,7 +36,6 @@ public class JuanSlug extends Criatura {
         this.criaturaAtaco = true;
         this.estadisticas[1] += 7;
         otro.recibirDaño(this);
-        super.imprimirMensaje(otro,2);
     }
 
     public void atacar4(Criatura otro) {
@@ -58,10 +49,6 @@ public class JuanSlug extends Criatura {
             this.vida -= this.getVidaMaxima()*0.15;
             uiInfoCriatura.actualizar();
         }
-    }
-
-    public boolean puedeRealizarAtaque4En(Criatura otro) {
-        return true;
     }
 
 }

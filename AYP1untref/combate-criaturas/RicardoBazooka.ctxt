@@ -8,29 +8,9 @@ comment2.target=RicardoBazooka(java.lang.String)
 comment3.params=otro
 comment3.target=void\ atacar1(Criatura)
 comment4.params=otro
-comment4.target=void\ atacar1(Criatura)
+comment4.target=void\ atacar2(Criatura)
 comment5.params=otro
-<<<<<<< HEAD
-comment5.target=boolean\ puedeRealizarAtaque2En(Criatura)
+comment5.target=void\ atacar3(Criatura)
 comment6.params=otro
-<<<<<<< HEAD
-comment6.target=void\ atacar3(Criatura)
-comment7.params=otro
-comment7.target=boolean\ puedeRealizarAtaque3En(Criatura)
-comment8.params=otro
-comment8.target=void\ atacar4(Criatura)
-comment9.params=otro
-comment9.target=boolean\ puedeRealizarAtaque4En(Criatura)
-numComments=10
-=======
 comment6.target=void\ atacar4(Criatura)
 numComments=7
->>>>>>> cd386784124023289aa9c20282096f50e323046a
-=======
-comment5.target=void\ atacar2(Criatura)
-comment6.params=otro
-comment6.target=boolean\ puedeRealizarAtaque2En(Criatura)
-comment7.params=otro
-comment7.target=void\ atacar3(Criatura)
-numComments=8
->>>>>>> 3e09ff4e42a2463382d657a511d6afa01bfdf9d3

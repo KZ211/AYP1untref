@@ -28,24 +28,15 @@ public class RicardoBazooka extends Criatura
         otro.recibirDaño(this);
     }
 
-    public void atacar1(Criatura otro) {
-        atacar1(otro);
-        super.imprimirMensaje(otro,0);
-    }
-
     public void atacar2(Criatura otro) {
-        atacar1(otro);
-        super.imprimirMensaje(otro,1);
-    }
-
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return false;
+        this.criaturaAtaco = true;
+        this.estadisticas[0] += 8;
     }
 
     public void atacar3(Criatura otro) {
-        atacar1(otro);
-        super.imprimirMensaje(otro,2);
-    }
+        this.criaturaAtaco = true;
+        otro.estadisticas[1]-= 4;
+        otro.recibirDaño(this);
 
     }
 
