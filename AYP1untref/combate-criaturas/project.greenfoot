@@ -75,6 +75,7 @@ dependency9.from=PantallaDuelo
 dependency9.to=MartaSlug
 dependency9.type=UsesDependency
 <<<<<<< HEAD
+<<<<<<< HEAD
 editor.fx.0.height=886
 editor.fx.0.width=1616
 editor.fx.0.x=-8
@@ -82,16 +83,21 @@ editor.fx.0.y=-8
 height=886
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 3e09ff4e42a2463382d657a511d6afa01bfdf9d3
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 height=736
 =======
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=392
 editor.fx.0.y=54
+=======
+>>>>>>> 3e09ff4e42a2463382d657a511d6afa01bfdf9d3
 height=660
 >>>>>>> 85a5aa388c1c96bf385157d316359044fde63ac9
 >>>>>>> cd386784124023289aa9c20282096f50e323046a
