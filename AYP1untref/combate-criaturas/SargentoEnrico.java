@@ -30,31 +30,6 @@ public class SargentoEnrico extends Criatura
     }
 
     public void atacar2(Criatura otro) {
-<<<<<<< HEAD
-        this.estadisticas[1]*=2;
-        otro.recibirDaño(this);
-        super.imprimirMensaje(otro,1);
-
-    }
-
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        return true;
-    }
-
-    public void atacar3(Criatura otro) {
-
-        this.estadisticas[1]+=30;
-        this.estadisticas[2]+=10;
-        super.curacion(otro);        
-
-        
-        super.imprimirMensaje2(otro,2);
-
-    }
-
-    public boolean puedeRealizarAtaque3En(Criatura otro) {
-        return true;
-=======
         this.criaturaAtaco = true;
         this.estadisticas[1] /= 1.25;
         this.estadisticas[2] /= 1.25;
@@ -66,7 +41,6 @@ public class SargentoEnrico extends Criatura
         this.estadisticas[1]+= 4;
         otro.recibirDaño(this);
                
->>>>>>> cd386784124023289aa9c20282096f50e323046a
     }
 
     public void atacar4(Criatura otro) {

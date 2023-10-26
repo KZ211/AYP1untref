@@ -21,7 +21,6 @@ public class JuanSlug extends Criatura {
     }
 
     public void atacar1(Criatura otro) {
-<<<<<<< HEAD
         otro.recibirDaño(this);
         super.imprimirMensaje(otro,0);
         
@@ -30,9 +29,6 @@ public class JuanSlug extends Criatura {
     public void atacar2(Criatura otro) {
         this.estadisticas[0] *= 2;
         this.estadisticas[1] -= 10;
-=======
-        this.criaturaAtaco = true;
->>>>>>> cd386784124023289aa9c20282096f50e323046a
         otro.recibirDaño(this);
         super.imprimirMensaje(otro,1);
     }
@@ -52,13 +48,6 @@ public class JuanSlug extends Criatura {
     }
 
     public void atacar4(Criatura otro) {
-<<<<<<< HEAD
-        this.vida -= 500;
-        uiInfoCriatura.actualizar();
-        this.estadisticas[0] = otro.vida * 30;
-        otro.recibirDaño(this);
-        super.imprimirMensaje(otro,3);
-=======
         this.criaturaAtaco = true;
         double numero = Math.random();
         int dañoFormula = (this.estadisticas[0]/2);
@@ -69,7 +58,6 @@ public class JuanSlug extends Criatura {
             this.vida -= this.getVidaMaxima()*0.15;
             uiInfoCriatura.actualizar();
         }
->>>>>>> cd386784124023289aa9c20282096f50e323046a
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
