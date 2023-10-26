@@ -17,16 +17,20 @@ public class JuanSlug extends Criatura {
 
     public JuanSlug(String nombre) {
         this(nombre, false);
+        
     }
 
     public void atacar1(Criatura otro) {
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,0);
+        
     }
     
     public void atacar2(Criatura otro) {
         this.estadisticas[0] *= 2;
         this.estadisticas[1] -= 10;
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,1);
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
@@ -36,6 +40,7 @@ public class JuanSlug extends Criatura {
     public void atacar3(Criatura otro) {
         this.estadisticas[0] = otro.vida / 2;
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,2);
     }
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
@@ -47,6 +52,7 @@ public class JuanSlug extends Criatura {
         uiInfoCriatura.actualizar();
         this.estadisticas[0] = otro.vida * 30;
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,3);
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {

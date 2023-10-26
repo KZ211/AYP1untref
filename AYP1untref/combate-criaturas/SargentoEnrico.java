@@ -27,6 +27,7 @@ public class SargentoEnrico extends Criatura
         this.estadisticas[0] += 500;
 
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,0);
     }
 
     public boolean puedeRealizarAtaque1En(Criatura otro) {
@@ -36,6 +37,7 @@ public class SargentoEnrico extends Criatura
     public void atacar2(Criatura otro) {
         this.estadisticas[1]*=2;
         otro.recibirDaño(this);
+        super.imprimirMensaje(otro,1);
 
     }
 
@@ -49,8 +51,8 @@ public class SargentoEnrico extends Criatura
         this.estadisticas[2]+=10;
         super.curacion(otro);        
 
-        otro.recibirDaño(this);
         
+        super.imprimirMensaje2(otro,2);
 
     }
 
@@ -65,6 +67,7 @@ public class SargentoEnrico extends Criatura
         otro.recibirDaño(this);
 
         uiInfoCriatura.actualizar();
+        super.imprimirMensaje(otro,3);
     }
     public boolean puedeRealizarAtaque4En(Criatura otro) {
         return true;

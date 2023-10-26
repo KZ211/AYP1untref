@@ -7,23 +7,28 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class MartaSlug extends Criatura{
-     public MartaSlug(String nombre, boolean imagenEspejada) {
+    public MartaSlug(String nombre, boolean imagenEspejada) {
         super(
-        nombre,
-        1000,
-        new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" },
-        imagenEspejada,
-        new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
-        new int[] {10,100,3});
+            nombre,
+            1000,
+            new String[] { "- Puño -", "- Patada -","- Granada -", "- Sniper -" },
+            imagenEspejada,
+            new String[] { "Causa un daño moderado a un enemigo", "-", "-", "-" },
+            new int[] {10,100,3});
     }
-    
-    
+
     public MartaSlug(String nombre) {
         this(nombre, false);
     }
 
+    public void atacar1(Criatura otro) {
+        atacar1(otro);
+        super.imprimirMensaje(otro,0);
+    }
+
     public void atacar2(Criatura otro) {
         atacar1(otro);
+        super.imprimirMensaje(otro,1);
     }
 
     public boolean puedeRealizarAtaque2En(Criatura otro) {
@@ -32,6 +37,7 @@ public class MartaSlug extends Criatura{
 
     public void atacar3(Criatura otro) {
         atacar1(otro);
+        super.imprimirMensaje(otro,2);
     }
 
     public boolean puedeRealizarAtaque3En(Criatura otro) {
@@ -40,6 +46,7 @@ public class MartaSlug extends Criatura{
 
     public void atacar4(Criatura otro) {
         atacar1(otro);
+        super.imprimirMensaje(otro,3);
     }
 
     public boolean puedeRealizarAtaque4En(Criatura otro) {
