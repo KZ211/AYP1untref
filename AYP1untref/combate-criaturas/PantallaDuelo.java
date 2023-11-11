@@ -1,15 +1,16 @@
 import greenfoot.*;
+import javax.swing.JOptionPane;
 
 public class PantallaDuelo extends World {
     private Texto turnoTexto;
     private UIAtaques uiAtaques;
     private Criatura[] criaturas = new Criatura[4];
-
+    private GreenfootImage anuncioTurno;
     private int ronda = 0;
     private int turno = 0;
     private int personaje = -1;
-
-
+    private Anuncio anuncio_;
+    private int tiempo = 5;
     public PantallaDuelo() {
         super(700, 400, 1);
 
@@ -17,10 +18,13 @@ public class PantallaDuelo extends World {
 
         turnoTexto = new Texto("Ronda 1 | Turno 1", 20, Color.BLACK, Color.WHITE);
         addObject(turnoTexto, turnoTexto.getImage().getWidth() / 2, turnoTexto.getImage().getHeight() / 2);
-
+        
+        tiempo--;
+        
         uiAtaques = new UIAtaques(criaturas);
         addObject(uiAtaques, 350, 300);
-
+        
+        anuncio_ = new Anuncio();
         GreenfootImage imagenFondo = new GreenfootImage("elmejorbackground.jpg");
         getBackground().drawImage(imagenFondo, 0, 0);
 
@@ -76,15 +80,19 @@ public class PantallaDuelo extends World {
     public void click(Criatura c){
         uiAtaques.click(c);
         if(criaturas[this.personaje].criaturaAtaco == false){
-            System.out.println("Primero haz un ataque para avanzar el turno");
+            // se agrega un anuncio flotante que indica que hay que realizar una acción.
+            addObject(anuncio_, 520,330);
+            
         }else{
             criaturas[this.personaje].criaturaAtaco = false;
             if(c != criaturas[this.personaje]) {
             if(criaturas[0].vida==0 && criaturas[1].vida==0 || 
                 criaturas[2].vida==0 && criaturas[3].vida==0){
-                System.out.println("Felicidades, ganaste");
+                Greenfoot.setWorld(new PantallaFinal());    
             }else{
                 turno();
+                // Luego de cada turno, se remueve el anuncio de accion
+                removeObject(anuncio_);
             }
         }}
     }
