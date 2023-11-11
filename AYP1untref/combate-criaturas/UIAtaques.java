@@ -10,7 +10,10 @@ public class UIAtaques extends Actor {
     Criatura[] criaturas;
     Boton botonSeleccionado;
     Parrafo descripcion;
+<<<<<<< HEAD
     TextoConsola consola;
+=======
+>>>>>>> 0df5d50571179f4fa805e240238e7b02d2a8196b
     Runnable ataque = null;
     Criatura ataqueObjetivo = null;
     Criatura hoverObjetivo = null;
@@ -18,6 +21,7 @@ public class UIAtaques extends Actor {
     public UIAtaques(Criatura[] criaturas) {
         this.criaturas = criaturas;
 
+<<<<<<< HEAD
         b1 = new Boton("", null, 25, Color.BLACK, 200, 40);
         b2 = new Boton("", null, 25, Color.BLACK, 200, 40);
         b3 = new Boton("", null, 25, Color.BLACK, 200, 40);
@@ -25,10 +29,19 @@ public class UIAtaques extends Actor {
         descripcion = new Parrafo("Ataque", 20, Color.BLACK, 344, 192);
         tituloAtaques = new Texto("Ataques", 30, Color.BLACK, null);
         consola = new TextoConsola("Consola", 20, Color.WHITE, 344, 192);
+=======
+        b1 = new Boton("", null, 25, Color.BLACK, 320, 30);
+        b2 = new Boton("", null, 25, Color.BLACK, 320, 30);
+        b3 = new Boton("", null, 25, Color.BLACK, 320, 30);
+        b4 = new Boton("", null, 30, Color.BLACK, 320, 36);
+        descripcion = new Parrafo("Ataque", 20, Color.BLACK, 344, 192);
+        tituloAtaques = new Texto("Ataques", 30, Color.BLACK, null);
+>>>>>>> 0df5d50571179f4fa805e240238e7b02d2a8196b
     }
 
     @Override
     protected void addedToWorld(World world) {
+<<<<<<< HEAD
         getWorld().addObject(tituloAtaques, 400, 225);
         getWorld().addObject(b1, 140, 270);
         getWorld().addObject(b2, 400, 270);
@@ -36,6 +49,14 @@ public class UIAtaques extends Actor {
         getWorld().addObject(b4, 400, 320);
         getWorld().addObject(descripcion, 344 / 2, 450);
         getWorld().addObject(consola, 1200 / 2, 450);
+=======
+        getWorld().addObject(tituloAtaques, 170, 225);
+        getWorld().addObject(b1, 176, 265);
+        getWorld().addObject(b2, 176, 300);
+        getWorld().addObject(b3, 176, 335);
+        getWorld().addObject(b4, 176, 373);
+        getWorld().addObject(descripcion, 352 + 344 / 2, 300);
+>>>>>>> 0df5d50571179f4fa805e240238e7b02d2a8196b
     }
 
     public void asignarCriaturaActual(Criatura criaturaActual) {
@@ -86,6 +107,7 @@ public class UIAtaques extends Actor {
     }
 
     private void dibujarFondo() {
+<<<<<<< HEAD
         GreenfootImage imagenBarra = new GreenfootImage(800, 300);
         imagenBarra.setColor(Color.BLACK);
         imagenBarra.fill();
@@ -93,6 +115,15 @@ public class UIAtaques extends Actor {
         imagenBarra.fillRect(4, 4, 795, 150);
         imagenBarra.setColor(Color.LIGHT_GRAY);
         imagenBarra.fillRect(4, 160, 400, 180);
+=======
+        GreenfootImage imagenBarra = new GreenfootImage(700, 200);
+        imagenBarra.setColor(Color.BLACK);
+        imagenBarra.fill();
+        imagenBarra.setColor(criaturaActual.esEquipo1() ? Color.RED : Color.BLUE);
+        imagenBarra.fillRect(4, 4, 344, 192);
+        imagenBarra.setColor(Color.LIGHT_GRAY);
+        imagenBarra.fillRect(352, 4, 344, 192);
+>>>>>>> 0df5d50571179f4fa805e240238e7b02d2a8196b
         setImage(imagenBarra);
     }
 
