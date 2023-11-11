@@ -7,6 +7,7 @@ public class PantallaDuelo extends World {
 
     private int ronda = 0;
     private int turno = 0;
+    private int personaje = -1;
 
 
     public PantallaDuelo() {
@@ -47,10 +48,20 @@ public class PantallaDuelo extends World {
     //en ese caso resetea turno a 0 e inicia una nueva ronda
     public void turno() {
         turno++;
+        personaje++;
         
-        if (turno > criaturas.length) {
-            turno = 0;
-            ronda();
+        if(personaje >= criaturas.length){
+        personaje = -1;
+        turno = 0;
+        ronda();
+        }
+        
+        while (criaturas[personaje].vida == 0) {
+            personaje++;
+            if (personaje >= criaturas.length) {
+                personaje = -1;
+                ronda();
+            }
         }
         
         for (int i = 0; i < criaturas.length; i++) {
@@ -58,15 +69,24 @@ public class PantallaDuelo extends World {
         }
         
         turnoTexto.actualizarTexto("Ronda " + ronda + " | Turno " + turno);
-        uiAtaques.asignarCriaturaActual(criaturas[turno-1]);
-    }
-    
-    //cuando clikee una criatura va al siguiente turno
-    public void click(Criatura c) {
-        uiAtaques.click(c);
-        if(c != criaturas[turno-1]) {
-            turno();
+        uiAtaques.asignarCriaturaActual(criaturas[personaje]);
         }
+        
+    //cuando clikee una criatura va al siguiente turno
+    public void click(Criatura c){
+        uiAtaques.click(c);
+        if(criaturas[this.personaje].criaturaAtaco == false){
+            System.out.println("Primero haz un ataque para avanzar el turno");
+        }else{
+            criaturas[this.personaje].criaturaAtaco = false;
+            if(c != criaturas[this.personaje]) {
+            if(criaturas[0].vida==0 && criaturas[1].vida==0 || 
+                criaturas[2].vida==0 && criaturas[3].vida==0){
+                System.out.println("Felicidades, ganaste");
+            }else{
+                turno();
+            }
+        }}
     }
 
     public void hover(Criatura c) {

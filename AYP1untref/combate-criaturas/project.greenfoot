@@ -75,11 +75,19 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaDuelo
 dependency9.to=MartaSlug
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=737
 editor.fx.0.width=814
 editor.fx.0.x=360
 editor.fx.0.y=26
 height=830
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=392
+editor.fx.0.y=54
+height=660
+>>>>>>> dcc8707d01f92c8b72f5bc0c9d75afc33a7fc9f0
 package.numDependencies=24
 package.numTargets=16
 project.charset=UTF-8
@@ -149,7 +157,7 @@ target16.height=70
 target16.name=SargentoEnrico
 target16.showInterface=false
 target16.type=ClassTarget
-target16.width=130
+target16.width=120
 target16.x=0
 target16.y=0
 target2.height=70
