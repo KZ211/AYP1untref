@@ -11,7 +11,7 @@ public class PantallaDuelo extends World {
 
 
     public PantallaDuelo() {
-        super(700, 400, 1);
+        super(800, 500, 1);
 
         agregarCriaturas();
 
@@ -19,10 +19,10 @@ public class PantallaDuelo extends World {
         addObject(turnoTexto, turnoTexto.getImage().getWidth() / 2, turnoTexto.getImage().getHeight() / 2);
 
         uiAtaques = new UIAtaques(criaturas);
-        addObject(uiAtaques, 350, 300);
+        addObject(uiAtaques, 400, 350);
 
         GreenfootImage imagenFondo = new GreenfootImage("elmejorbackground.jpg");
-        getBackground().drawImage(imagenFondo, 0, 0);
+        getBackground().drawImage(imagenFondo, 45, 0);
 
         ronda();
     }
@@ -33,10 +33,10 @@ public class PantallaDuelo extends World {
         criaturas[2] = new SargentoEnrico("Sargento Enrico", true);
         criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
-        addObject(criaturas[0], 100, 80);
-        addObject(criaturas[1], 240, 80);
-        addObject(criaturas[2], 460, 80);
-        addObject(criaturas[3], 600, 80);
+        addObject(criaturas[0], 150, 80);
+        addObject(criaturas[1], 290, 80);
+        addObject(criaturas[2], 510, 80);
+        addObject(criaturas[3], 650, 80);
     }
 
     private void ronda() {
@@ -56,7 +56,7 @@ public class PantallaDuelo extends World {
         ronda();
         }
         
-        while (criaturas[personaje].vida == 0) {
+        while(criaturas[personaje].vida == 0) {
             personaje++;
             if (personaje >= criaturas.length) {
                 personaje = -1;
@@ -75,7 +75,7 @@ public class PantallaDuelo extends World {
     //cuando clikee una criatura va al siguiente turno
     public void click(Criatura c){
         uiAtaques.click(c);
-        if(criaturas[this.personaje].criaturaAtaco == false){
+        if(criaturas[this.personaje].getCriaturaAtaco() == false){
             System.out.println("Primero haz un ataque para avanzar el turno");
         }else{
             criaturas[this.personaje].criaturaAtaco = false;

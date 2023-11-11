@@ -32,6 +32,10 @@ public class Boton extends Actor {
     public Boton(String texto, BotonReactor onClick) {
         this(texto, onClick, 30, Color.BLACK, 0, 0);
     }
+    
+    public String getTextoBoton(){
+        return this.texto;
+    }
 
     public void act() {
         if (Greenfoot.mouseClicked(this)) {

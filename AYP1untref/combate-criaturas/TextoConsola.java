@@ -3,7 +3,7 @@ import greenfoot.Color;
 import greenfoot.Font;
 import greenfoot.GreenfootImage;
 
-public class Parrafo extends Actor {
+public class TextoConsola extends Actor {
     private static final int MARGIN_X = 10;
     private static final String MONOSPACED_FONT_FAMILY = "Monospaced";
 
@@ -17,7 +17,7 @@ public class Parrafo extends Actor {
     private int charWidth;
     private String wrappedText;
 
-    public Parrafo(String text, int size, Color color, int width, int height) {
+    public TextoConsola(String text, int size, Color color, int width, int height) {
         this.fontColor = color;
         this.width = width;
         this.height = height;
