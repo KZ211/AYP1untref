@@ -20,6 +20,6 @@ public class PantallaFinal extends World
     public void act(){ 
         // setImage( background.getCurrentImage() );
         final_ = new Final(final_);
-        addObject(final_,180,550);         
+        addObject(final_,400,200);         
     }
 }
