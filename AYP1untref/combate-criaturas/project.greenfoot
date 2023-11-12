@@ -1,7 +1,10 @@
 #Greenfoot project file
 class.JuanSlug.image=juabslug-removebg-preview.png
 class.MartaSlug.image=martaslug-removebg-preview.png
+<<<<<<< HEAD
 class.PantallaPrincipal.image=metal-slug-clasico-juegos-arcade.jpg
+=======
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 class.RicardoBazooka.image=Ricardo\ Bazooka.png
 class.SargentoEnrico.image=Ricardo_Paragua-removebg-preview.png
 dependency1.from=UITurno
@@ -59,6 +62,7 @@ dependency25.from=UIAtaques
 dependency25.to=Parrafo
 dependency25.type=UsesDependency
 dependency26.from=UIAtaques
+<<<<<<< HEAD
 dependency26.to=BotonReactor
 dependency26.type=UsesDependency
 dependency27.from=Boton
@@ -69,11 +73,24 @@ dependency28.to=Criatura
 dependency28.type=UsesDependency
 dependency29.from=Criatura
 dependency29.to=UIInfoCriatura
+=======
+dependency26.to=TextoConsola
+dependency26.type=UsesDependency
+dependency27.from=UIAtaques
+dependency27.to=BotonReactor
+dependency27.type=UsesDependency
+dependency28.from=Boton
+dependency28.to=BotonReactor
+dependency28.type=UsesDependency
+dependency29.from=UIInfoCriatura
+dependency29.to=Criatura
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 dependency29.type=UsesDependency
 dependency3.from=UITurno
 dependency3.to=ColoresUI
 dependency3.type=UsesDependency
 dependency30.from=Criatura
+<<<<<<< HEAD
 dependency30.to=MyGreenfootImage
 dependency30.type=UsesDependency
 dependency31.from=Criatura
@@ -91,6 +108,28 @@ dependency34.type=UsesDependency
 dependency35.from=BotonReactor
 dependency35.to=Criatura
 dependency35.type=UsesDependency
+=======
+dependency30.to=UIInfoCriatura
+dependency30.type=UsesDependency
+dependency31.from=Criatura
+dependency31.to=MyGreenfootImage
+dependency31.type=UsesDependency
+dependency32.from=Criatura
+dependency32.to=PantallaDuelo
+dependency32.type=UsesDependency
+dependency33.from=Final
+dependency33.to=MyGreenfootImage
+dependency33.type=UsesDependency
+dependency34.from=BotonReactor
+dependency34.to=Boton
+dependency34.type=UsesDependency
+dependency35.from=BotonReactor
+dependency35.to=UIAtaques
+dependency35.type=UsesDependency
+dependency36.from=BotonReactor
+dependency36.to=Criatura
+dependency36.type=UsesDependency
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 dependency4.from=Logger
 dependency4.to=Criatura
 dependency4.type=UsesDependency
@@ -109,6 +148,7 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaDuelo
 dependency9.to=Texto
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
@@ -116,6 +156,15 @@ editor.fx.0.y=0
 height=830
 package.numDependencies=35
 package.numTargets=21
+=======
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=392
+editor.fx.0.y=54
+height=920
+package.numDependencies=36
+package.numTargets=22
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -201,9 +250,15 @@ target18.width=120
 target18.x=0
 target18.y=0
 target19.height=70
+<<<<<<< HEAD
 target19.name=Criatura
 target19.showInterface=false
 target19.type=AbstractTarget
+=======
+target19.name=TextoConsola
+target19.showInterface=false
+target19.type=ClassTarget
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 target19.width=120
 target19.x=0
 target19.y=0
@@ -215,19 +270,41 @@ target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< HEAD
 target20.name=Final
 target20.showInterface=false
 target20.type=ClassTarget
+=======
+target20.name=Criatura
+target20.showInterface=false
+target20.type=AbstractTarget
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< HEAD
 target21.name=SargentoEnrico
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=130
 target21.x=0
 target21.y=0
+=======
+target21.name=Final
+target21.showInterface=false
+target21.type=ClassTarget
+target21.width=120
+target21.x=0
+target21.y=0
+target22.height=70
+target22.name=SargentoEnrico
+target22.showInterface=false
+target22.type=ClassTarget
+target22.width=120
+target22.x=0
+target22.y=0
+>>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
 target3.height=70
 target3.name=UITurno
 target3.showInterface=false
@@ -278,7 +355,7 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
-width=1550
-world.lastInstantiated=PantallaDuelo
-xPosition=0
+width=1101
+world.lastInstantiated=PantallaPrincipal
+xPosition=481
 yPosition=0

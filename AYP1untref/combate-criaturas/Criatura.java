@@ -13,6 +13,7 @@ public abstract class Criatura extends Actor {
     protected final boolean equipo1;
 
     protected int vida;
+    protected double dañoFormula;
     protected boolean criaturaAtaco;
 
     protected UIInfoCriatura uiInfoCriatura;
@@ -155,6 +156,7 @@ public abstract class Criatura extends Actor {
     protected double recibirDaño(Criatura atacante) {
         double dañoFormula = 2*(1 + atacante.estadisticas[0]/this.estadisticas[1])* 
         this.rand();
+        this.dañoFormula = dañoFormula;
         this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();
         return dañoFormula;
@@ -170,6 +172,14 @@ public abstract class Criatura extends Actor {
 
     public int getVidaMaxima() {
         return vidaMaxima;
+    }
+    
+    public boolean getCriaturaAtaco(){
+        return criaturaAtaco;
+    }
+    
+    public double getDañoFormula(){
+        return this.dañoFormula;
     }
 
     public boolean esEquipo1() {
