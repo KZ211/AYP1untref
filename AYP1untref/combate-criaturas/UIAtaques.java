@@ -29,13 +29,13 @@ public class UIAtaques extends Actor {
 
     @Override
     protected void addedToWorld(World world) {
-        getWorld().addObject(tituloAtaques, 400, 225);
-        getWorld().addObject(b1, 140, 270);
-        getWorld().addObject(b2, 400, 270);
-        getWorld().addObject(b3, 650, 270);
-        getWorld().addObject(b4, 400, 320);
-        getWorld().addObject(descripcion, 344 / 2, 450);
-        getWorld().addObject(consola, 1200 / 2, 450);
+        getWorld().addObject(tituloAtaques, 500, 375);
+        getWorld().addObject(b1, 140, 415);
+        getWorld().addObject(b2, 500, 415);
+        getWorld().addObject(b3, 850, 415);
+        getWorld().addObject(b4, 500, 470);
+        getWorld().addObject(descripcion, 344 / 2, 600);
+        getWorld().addObject(consola, 1400 / 2, 605);
     }
 
     public void asignarCriaturaActual(Criatura criaturaActual) {
@@ -86,13 +86,13 @@ public class UIAtaques extends Actor {
     }
 
     private void dibujarFondo() {
-        GreenfootImage imagenBarra = new GreenfootImage(800, 300);
+        GreenfootImage imagenBarra = new GreenfootImage(1190, 350);
         imagenBarra.setColor(Color.BLACK);
         imagenBarra.fill();
         imagenBarra.setColor(criaturaActual.esEquipo1() ? Color.RED : Color.BLUE);
-        imagenBarra.fillRect(4, 4, 795, 150);
+        imagenBarra.fillRect(4, 4, 1190, 150);
         imagenBarra.setColor(Color.LIGHT_GRAY);
-        imagenBarra.fillRect(4, 160, 400, 180);
+        imagenBarra.fillRect(4, 160, 710, 180);
         setImage(imagenBarra);
     }
 

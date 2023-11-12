@@ -12,7 +12,7 @@ public class PantallaDuelo extends World {
     private Anuncio anuncio_;
     private int tiempo = 5;
     public PantallaDuelo() {
-        super(800, 500, 1);
+        super(1000, 700, 1);
 
         agregarCriaturas();
 
@@ -22,11 +22,12 @@ public class PantallaDuelo extends World {
         tiempo--;
         
         uiAtaques = new UIAtaques(criaturas);
-        addObject(uiAtaques, 400, 350);
+        addObject(uiAtaques, 400, 530);
         anuncio_ = new Anuncio();
         GreenfootImage imagenFondo = new GreenfootImage("elmejorbackground.jpg");
-        getBackground().drawImage(imagenFondo, 45, 0);
-
+        getBackground().drawImage(imagenFondo, 0, 0);
+        
+        
         ronda();
     }
 
@@ -36,10 +37,23 @@ public class PantallaDuelo extends World {
         criaturas[2] = new SargentoEnrico("Sargento Enrico", true);
         criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
-        addObject(criaturas[0], 150, 80);
-        addObject(criaturas[1], 290, 80);
-        addObject(criaturas[2], 510, 80);
-        addObject(criaturas[3], 650, 80);
+        addGif();
+        addObject(criaturas[0], 150, 230);
+        addObject(criaturas[1], 380, 230);
+        addObject(criaturas[2], 650, 230);
+        addObject(criaturas[3], 850, 230);
+    }
+    
+     public void addGif(){
+        GifLoop gifLoop= new GifLoop("juanSlugMov.gif");
+        GifLoop gifLoop0= new GifLoop("MartaSluMov.gif");
+        GifLoop gifLoop1= new GifLoop("SargentoEnricom.gif");
+        GifLoop gifLoop2= new GifLoop("RicardoMov.gif");
+        
+        addObject(gifLoop, 150, 210);
+        addObject(gifLoop0, 380, 210);
+        addObject(gifLoop1, 650, 215);
+        addObject(gifLoop2, 850, 230);
     }
 
     private void ronda() {
