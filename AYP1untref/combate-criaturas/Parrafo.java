@@ -72,7 +72,6 @@ public class Parrafo extends Actor {
         this.wrappedText = finalText;
     }
 
->>>>>>> 5b440106063f1c72c586616ca138dd0e383f8e57
     private void render() {
         GreenfootImage img = new GreenfootImage(width, height);
         img.setColor(fontColor);
