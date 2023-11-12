@@ -38,10 +38,10 @@ public class PantallaDuelo extends World {
         criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
         addGif();
-        addObject(criaturas[0], 150, 230);
-        addObject(criaturas[1], 380, 230);
-        addObject(criaturas[2], 650, 230);
-        addObject(criaturas[3], 850, 230);
+        addObject(criaturas[0], 150, 220);
+        addObject(criaturas[1], 380, 220);
+        addObject(criaturas[2], 650, 220);
+        addObject(criaturas[3], 850, 220);
     }
     
      public void addGif(){
