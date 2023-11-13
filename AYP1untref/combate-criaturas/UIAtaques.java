@@ -24,24 +24,11 @@ public class UIAtaques extends Actor {
         b4 = new Boton("", null, 30, Color.BLACK, 200, 36);
         descripcion = new Parrafo("Ataque", 20, Color.BLACK, 344, 192);
         tituloAtaques = new Texto("Ataques", 30, Color.BLACK, null);
-<<<<<<< HEAD
-        consola = new TextoConsola("Consola", 20, Color.WHITE, 370, 210);
-=======
         consola = new TextoConsola("", 20, Color.WHITE, 370, 210);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     }
 
     @Override
     protected void addedToWorld(World world) {
-<<<<<<< HEAD
-        getWorld().addObject(tituloAtaques, 400, 225);
-        getWorld().addObject(b1, 140, 270);
-        getWorld().addObject(b2, 400, 270);
-        getWorld().addObject(b3, 650, 270);
-        getWorld().addObject(b4, 400, 320);
-        getWorld().addObject(descripcion, 344 / 2, 450);
-        getWorld().addObject(consola, 1200 / 2, 450);
-=======
         getWorld().addObject(tituloAtaques, 500, 375);
         getWorld().addObject(b1, 140, 415);
         getWorld().addObject(b2, 500, 415);
@@ -49,7 +36,6 @@ public class UIAtaques extends Actor {
         getWorld().addObject(b4, 500, 470);
         getWorld().addObject(descripcion, 344 / 2, 600);
         getWorld().addObject(consola, 1400 / 2, 605);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     }
 
     public void asignarCriaturaActual(Criatura criaturaActual) {
@@ -100,15 +86,6 @@ public class UIAtaques extends Actor {
     }
 
     private void dibujarFondo() {
-<<<<<<< HEAD
-        GreenfootImage imagenBarra = new GreenfootImage(800, 300);
-        imagenBarra.setColor(Color.BLACK);
-        imagenBarra.fill();
-        imagenBarra.setColor(criaturaActual.esEquipo1() ? Color.RED : Color.BLUE);
-        imagenBarra.fillRect(4, 4, 795, 150);
-        imagenBarra.setColor(Color.LIGHT_GRAY);
-        imagenBarra.fillRect(4, 160, 400, 180);
-=======
         GreenfootImage imagenBarra = new GreenfootImage(1190, 350);
         imagenBarra.setColor(Color.BLACK);
         imagenBarra.fill();
@@ -116,7 +93,6 @@ public class UIAtaques extends Actor {
         imagenBarra.fillRect(4, 4, 1190, 150);
         imagenBarra.setColor(Color.LIGHT_GRAY);
         imagenBarra.fillRect(4, 160, 710, 180);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
         setImage(imagenBarra);
     }
 

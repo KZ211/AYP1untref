@@ -14,10 +14,7 @@ public abstract class Criatura extends Actor {
 
     protected int vida;
     protected double dañoFormula;
-<<<<<<< HEAD
-=======
     protected double dañoHecho;
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     protected boolean criaturaAtaco;
 
     protected UIInfoCriatura uiInfoCriatura;
@@ -163,15 +160,8 @@ public abstract class Criatura extends Actor {
     }
     //Ataque, funciona con la formula en base a las estadisticas que agregue arriba
     //by: Alexis :D
-<<<<<<< HEAD
-    protected double recibirDaño(Criatura atacante) {
-        double dañoFormula = 2*(1 + atacante.estadisticas[0]/this.estadisticas[1])* 
-        this.rand();
-        this.dañoFormula = dañoFormula;
-=======
     protected int recibirDaño(Criatura atacante) {
         int dañoFormula = (int) this.ataque(atacante.estadisticas[0]);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
         this.vida -= dañoFormula;
         uiInfoCriatura.actualizar();
         return dañoFormula;
@@ -190,17 +180,10 @@ public abstract class Criatura extends Actor {
     }
     
     public boolean getCriaturaAtaco(){
-<<<<<<< HEAD
-        return criaturaAtaco;
-    }
-    
-    public double getDañoFormula(){
-=======
         return this.criaturaAtaco;
     }
     
     public double getDañoHecho(){
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
         return this.dañoFormula;
     }
 

@@ -1,9 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-<<<<<<< HEAD
-
-=======
 import greenfoot.GreenfootSound;
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 /**
  * Write a description of class PantallaPrincipal here.
  * 
@@ -14,11 +10,8 @@ public class PantallaPrincipal extends World
 {
     Boton hoverObjetivo = null;
     private Comenzar comenzar;
-<<<<<<< HEAD
-=======
     private GifImage icono;
     private GreenfootSound sound;
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     
     private PantallaDuelo mundoDuelo;
     public PantallaPrincipal()
@@ -31,13 +24,6 @@ public class PantallaPrincipal extends World
         mundoDuelo = new PantallaDuelo();
         comenzar = new Comenzar("", null);
         addObject(comenzar,480,550);
-<<<<<<< HEAD
-        
-    }
-
-    public void click(Boton c){
-        Greenfoot.setWorld(mundoDuelo);
-=======
         addTropaGif();
         addZombieGif();
         addMusicPantallaPrincipal();
@@ -71,7 +57,6 @@ public class PantallaPrincipal extends World
         Greenfoot.setWorld(mundoDuelo);
         stopMusicPantallaPrincipal();
         addMusicPantallaDuelo();
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     }
 
     public void hover(Boton c) {

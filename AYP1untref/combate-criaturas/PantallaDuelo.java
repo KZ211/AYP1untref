@@ -5,10 +5,7 @@ public class PantallaDuelo extends World {
     private Texto turnoTexto;
     private UIAtaques uiAtaques;
     private Criatura[] criaturas = new Criatura[4];
-<<<<<<< HEAD
-=======
     private GifLoop[] gifLoop = new GifLoop[4];
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     private GreenfootImage anuncioTurno;
     private int ronda = 0;
     private int turno = 0;
@@ -16,11 +13,7 @@ public class PantallaDuelo extends World {
     private Anuncio anuncio_;
     private int tiempo = 5;
     public PantallaDuelo() {
-<<<<<<< HEAD
-        super(800, 500, 1);
-=======
         super(1000, 700, 1);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 
         agregarCriaturas();
 
@@ -30,20 +23,12 @@ public class PantallaDuelo extends World {
         tiempo--;
         
         uiAtaques = new UIAtaques(criaturas);
-<<<<<<< HEAD
-        addObject(uiAtaques, 400, 350);
-        anuncio_ = new Anuncio();
-        GreenfootImage imagenFondo = new GreenfootImage("elmejorbackground.jpg");
-        getBackground().drawImage(imagenFondo, 45, 0);
-
-=======
         addObject(uiAtaques, 400, 530);
         anuncio_ = new Anuncio();
         GreenfootImage imagenFondo = new GreenfootImage("elmejorbackground.jpg");
         getBackground().drawImage(imagenFondo, 0, 0);
         
         
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
         ronda();
     }
 
@@ -53,12 +38,6 @@ public class PantallaDuelo extends World {
         criaturas[2] = new SargentoEnrico("Sargento Enrico", true);
         criaturas[3] = new RicardoBazooka("Ricardo Bazooka", true);
 
-<<<<<<< HEAD
-        addObject(criaturas[0], 150, 80);
-        addObject(criaturas[1], 290, 80);
-        addObject(criaturas[2], 510, 80);
-        addObject(criaturas[3], 650, 80);
-=======
         addGif();
         addObject(criaturas[0], 150, 220);
         addObject(criaturas[1], 380, 220);
@@ -76,7 +55,6 @@ public class PantallaDuelo extends World {
         addObject(gifLoop[1], 380, 210);
         addObject(gifLoop[2], 650, 215);
         addObject(gifLoop[3], 850, 230);
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
     }
 
     private void ronda() {
@@ -97,11 +75,7 @@ public class PantallaDuelo extends World {
         ronda();
         }
         
-<<<<<<< HEAD
-        while(criaturas[personaje].vida == 0) {
-=======
         if(criaturas[personaje].vida == 0){
->>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
             personaje++;
             if (personaje >= criaturas.length) {
                 personaje = -1;

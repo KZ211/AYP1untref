@@ -30,7 +30,7 @@ public class BotonReactor {
                 if (puedeAtacarlo(uiAtaques.ataqueObjetivo)) {
                     uiAtaques.consola.setText(criaturaActual + " Ataco a " + 
                     uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton()
-                    + " generandole " + criaturaActual.getDañoFormula());
+                    + " generandole " + criaturaActual.getDañoHecho());
                     atacar(uiAtaques.ataqueObjetivo);
                     uiAtaques.consola.setText(criaturaActual + " Ataco a " + 
                     uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton()
