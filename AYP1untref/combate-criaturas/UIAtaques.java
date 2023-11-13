@@ -24,7 +24,7 @@ public class UIAtaques extends Actor {
         b4 = new Boton("", null, 30, Color.BLACK, 200, 36);
         descripcion = new Parrafo("Ataque", 20, Color.BLACK, 344, 192);
         tituloAtaques = new Texto("Ataques", 30, Color.BLACK, null);
-        consola = new TextoConsola("Consola", 20, Color.WHITE, 370, 210);
+        consola = new TextoConsola("", 20, Color.WHITE, 370, 210);
     }
 
     @Override

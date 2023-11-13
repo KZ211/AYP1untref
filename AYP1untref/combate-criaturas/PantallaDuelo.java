@@ -5,6 +5,7 @@ public class PantallaDuelo extends World {
     private Texto turnoTexto;
     private UIAtaques uiAtaques;
     private Criatura[] criaturas = new Criatura[4];
+    private GifLoop[] gifLoop = new GifLoop[4];
     private GreenfootImage anuncioTurno;
     private int ronda = 0;
     private int turno = 0;
@@ -45,15 +46,15 @@ public class PantallaDuelo extends World {
     }
     
      public void addGif(){
-        GifLoop gifLoop= new GifLoop("juanSlugMov.gif");
-        GifLoop gifLoop0= new GifLoop("MartaSluMov.gif");
-        GifLoop gifLoop1= new GifLoop("SargentoEnricom.gif");
-        GifLoop gifLoop2= new GifLoop("RicardoMov.gif");
+        gifLoop[0] = new GifLoop("juanSlugMov.gif");
+        gifLoop[1] = new GifLoop("MartaSluMov.gif");
+        gifLoop[2] = new GifLoop("SargentoEnricom.gif");
+        gifLoop[3] = new GifLoop("RicardoMov.gif");
         
-        addObject(gifLoop, 150, 210);
-        addObject(gifLoop0, 380, 210);
-        addObject(gifLoop1, 650, 215);
-        addObject(gifLoop2, 850, 230);
+        addObject(gifLoop[0], 150, 210);
+        addObject(gifLoop[1], 380, 210);
+        addObject(gifLoop[2], 650, 215);
+        addObject(gifLoop[3], 850, 230);
     }
 
     private void ronda() {
@@ -66,28 +67,39 @@ public class PantallaDuelo extends World {
     public void turno() {
         turno++;
         personaje++;
+        int personajesMuertos = 0;
         
-        if(personaje >= criaturas.length){
+        if(personaje >= (criaturas.length-personajesMuertos)){
         personaje = -1;
         turno = 0;
         ronda();
         }
         
-        while(criaturas[personaje].vida == 0) {
+        if(criaturas[personaje].vida == 0){
             personaje++;
             if (personaje >= criaturas.length) {
                 personaje = -1;
+                turno = 0;
                 ronda();
             }
         }
         
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
+            if(criaturas[i].vida == 0){
+            removeObject(criaturas[i]);
+            removeObject(gifLoop[i]);
+            personajesMuertos++;
+            }
         }
         
         turnoTexto.actualizarTexto("Ronda " + ronda + " | Turno " + turno);
         uiAtaques.asignarCriaturaActual(criaturas[personaje]);
         }
+        
+    public void eliminarCriaturasMuertas(int criatura){
+        removeObject(criaturas[criatura]);
+    }
         
     //cuando clikee una criatura va al siguiente turno
     public void click(Criatura c){
@@ -106,7 +118,8 @@ public class PantallaDuelo extends World {
                 // Luego de cada turno, se remueve el anuncio de accion
                 removeObject(anuncio_);
             }
-        }}
+        }
+        }
     }
 
     public void hover(Criatura c) {
