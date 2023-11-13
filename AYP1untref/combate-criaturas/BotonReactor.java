@@ -16,7 +16,7 @@ public class BotonReactor {
     }
 
     public void run() {
-        // PantallaDuelo pantallaDuelo = ((PantallaDuelo) uiAtaques.getWorld());
+        //PantallaDuelo pantallaDuelo = ((PantallaDuelo) uiAtaques.getWorld());
 
         if (uiAtaques.botonSeleccionado == boton) {
             // Si clickeo lo que está seleccionado, lo des-selecciona
@@ -32,7 +32,10 @@ public class BotonReactor {
                     uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton()
                     + " generandole " + criaturaActual.getDañoFormula());
                     atacar(uiAtaques.ataqueObjetivo);
-                    // pantallaDuelo.turno();
+                    uiAtaques.consola.setText(criaturaActual + " Ataco a " + 
+                    uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton()
+                    + " generandole " + uiAtaques.ataqueObjetivo.getDañoHecho());
+                    //pantallaDuelo.turno();
                 }
             };
             uiAtaques.resetColorBotones();

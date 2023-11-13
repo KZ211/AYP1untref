@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright (c) 2013, 2020, Oracle and/or its affiliates. All rights reserved.
+=======
+ * Copyright (c) 2013, 2018, Oracle and/or its affiliates. All rights reserved.
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
  * DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS FILE HEADER.
  *
  * This code is free software; you can redistribute it and/or modify it
@@ -29,6 +33,7 @@ var typeSearchIndex;
 var memberSearchIndex;
 var tagSearchIndex;
 function loadScripts(doc, tag) {
+<<<<<<< HEAD
     createElem(doc, tag, 'search.js');
 
     createElem(doc, tag, 'module-search-index.js');
@@ -36,6 +41,84 @@ function loadScripts(doc, tag) {
     createElem(doc, tag, 'type-search-index.js');
     createElem(doc, tag, 'member-search-index.js');
     createElem(doc, tag, 'tag-search-index.js');
+=======
+    createElem(doc, tag, 'jquery/jszip/dist/jszip.js');
+    createElem(doc, tag, 'jquery/jszip-utils/dist/jszip-utils.js');
+    if (window.navigator.userAgent.indexOf('MSIE ') > 0 || window.navigator.userAgent.indexOf('Trident/') > 0 ||
+            window.navigator.userAgent.indexOf('Edge/') > 0) {
+        createElem(doc, tag, 'jquery/jszip-utils/dist/jszip-utils-ie.js');
+    }
+    createElem(doc, tag, 'search.js');
+
+    $.get(pathtoroot + "module-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "module-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("module-search-index.json").async("text").then(function(content){
+                            moduleSearchIndex = JSON.parse(content);
+                        });
+                    });
+                });
+            });
+    $.get(pathtoroot + "package-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "package-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("package-search-index.json").async("text").then(function(content){
+                            packageSearchIndex = JSON.parse(content);
+                        });
+                    });
+                });
+            });
+    $.get(pathtoroot + "type-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "type-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("type-search-index.json").async("text").then(function(content){
+                            typeSearchIndex = JSON.parse(content);
+                        });
+                    });
+                });
+            });
+    $.get(pathtoroot + "member-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "member-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("member-search-index.json").async("text").then(function(content){
+                            memberSearchIndex = JSON.parse(content);
+                        });
+                    });
+                });
+            });
+    $.get(pathtoroot + "tag-search-index.zip")
+            .done(function() {
+                JSZipUtils.getBinaryContent(pathtoroot + "tag-search-index.zip", function(e, data) {
+                    JSZip.loadAsync(data).then(function(zip){
+                        zip.file("tag-search-index.json").async("text").then(function(content){
+                            tagSearchIndex = JSON.parse(content);
+                        });
+                    });
+                });
+            });
+    if (!moduleSearchIndex) {
+        createElem(doc, tag, 'module-search-index.js');
+    }
+    if (!packageSearchIndex) {
+        createElem(doc, tag, 'package-search-index.js');
+    }
+    if (!typeSearchIndex) {
+        createElem(doc, tag, 'type-search-index.js');
+    }
+    if (!memberSearchIndex) {
+        createElem(doc, tag, 'member-search-index.js');
+    }
+    if (!tagSearchIndex) {
+        createElem(doc, tag, 'tag-search-index.js');
+    }
+    $(window).resize(function() {
+        $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
+    });
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 }
 
 function createElem(doc, tag, path) {
@@ -45,6 +128,7 @@ function createElem(doc, tag, path) {
     scriptElement.parentNode.insertBefore(script, scriptElement);
 }
 
+<<<<<<< HEAD
 function show(tableId, selected, columns) {
     if (tableId !== selected) {
         document.querySelectorAll('div.' + tableId + ':not(.' + selected + ')')
@@ -92,10 +176,38 @@ function switchTab(e) {
             selected.nextSibling.click();
             selected.nextSibling.focus();
             e.preventDefault();
+=======
+function show(type) {
+    count = 0;
+    for (var key in data) {
+        var row = document.getElementById(key);
+        if ((data[key] &  type) !== 0) {
+            row.style.display = '';
+            row.className = (count++ % 2) ? rowColor : altColor;
+        }
+        else
+            row.style.display = 'none';
+    }
+    updateTabs(type);
+}
+
+function updateTabs(type) {
+    for (var value in tabs) {
+        var sNode = document.getElementById(tabs[value][0]);
+        var spanNode = sNode.firstChild;
+        if (value == type) {
+            sNode.className = activeTableTab;
+            spanNode.innerHTML = tabs[value][1];
+        }
+        else {
+            sNode.className = tableTab;
+            spanNode.innerHTML = "<a href=\"javascript:show("+ value + ");\">" + tabs[value][1] + "</a>";
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
         }
     }
 }
 
+<<<<<<< HEAD
 var updateSearchResults = function() {};
 
 function indexFilesLoaded() {
@@ -130,3 +242,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
         history.replaceState(contentDiv.scrollTop, document.title);
     }
 });
+=======
+function updateModuleFrame(pFrame, cFrame) {
+    top.packageFrame.location = pFrame;
+    top.classFrame.location = cFrame;
+}
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
