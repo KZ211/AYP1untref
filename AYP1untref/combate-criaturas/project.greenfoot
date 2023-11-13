@@ -1,11 +1,12 @@
 #Greenfoot project file
-class.JuanSlug.image=juabslug-removebg-preview.png
-class.MartaSlug.image=martaslug-removebg-preview.png
-class.RicardoBazooka.image=Ricardo\ Bazooka.png
-class.SargentoEnrico.image=Ricardo_Paragua-removebg-preview.png
+class.JuanSlug.image=Circulo.png
+class.MartaSlug.image=Circulo.png
+class.RicardoBazooka.image=Circulo.png
+class.SargentoEnrico.image=Circulo.png
 dependency1.from=UITurno
 dependency1.to=Criatura
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency10.from=PantallaDuelo
 dependency10.to=UIAtaques
 dependency10.type=UsesDependency
@@ -35,10 +36,42 @@ dependency18.to=Boton
 dependency18.type=UsesDependency
 dependency19.from=Comenzar
 dependency19.to=MyGreenfootImage
+=======
+dependency10.from=PantallaFinal
+dependency10.to=Final
+dependency10.type=UsesDependency
+dependency11.from=PantallaDuelo
+dependency11.to=Texto
+dependency11.type=UsesDependency
+dependency12.from=PantallaDuelo
+dependency12.to=UIAtaques
+dependency12.type=UsesDependency
+dependency13.from=PantallaDuelo
+dependency13.to=Criatura
+dependency13.type=UsesDependency
+dependency14.from=PantallaDuelo
+dependency14.to=Anuncio
+dependency14.type=UsesDependency
+dependency15.from=PantallaDuelo
+dependency15.to=JuanSlug
+dependency15.type=UsesDependency
+dependency16.from=PantallaDuelo
+dependency16.to=MartaSlug
+dependency16.type=UsesDependency
+dependency17.from=PantallaDuelo
+dependency17.to=SargentoEnrico
+dependency17.type=UsesDependency
+dependency18.from=PantallaDuelo
+dependency18.to=RicardoBazooka
+dependency18.type=UsesDependency
+dependency19.from=PantallaDuelo
+dependency19.to=GifLoop
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 dependency19.type=UsesDependency
 dependency2.from=UITurno
 dependency2.to=MyGreenfootImage
 dependency2.type=UsesDependency
+<<<<<<< HEAD
 dependency20.from=Comenzar
 dependency20.to=PantallaPrincipal
 dependency20.type=UsesDependency
@@ -68,10 +101,42 @@ dependency28.to=BotonReactor
 dependency28.type=UsesDependency
 dependency29.from=UIInfoCriatura
 dependency29.to=Criatura
+=======
+dependency20.from=PantallaDuelo
+dependency20.to=PantallaFinal
+dependency20.type=UsesDependency
+dependency21.from=GifLoop
+dependency21.to=GifImage
+dependency21.type=UsesDependency
+dependency22.from=Comenzar
+dependency22.to=Boton
+dependency22.type=UsesDependency
+dependency23.from=Comenzar
+dependency23.to=MyGreenfootImage
+dependency23.type=UsesDependency
+dependency24.from=Comenzar
+dependency24.to=PantallaPrincipal
+dependency24.type=UsesDependency
+dependency25.from=UIAtaques
+dependency25.to=Criatura
+dependency25.type=UsesDependency
+dependency26.from=UIAtaques
+dependency26.to=Texto
+dependency26.type=UsesDependency
+dependency27.from=UIAtaques
+dependency27.to=Boton
+dependency27.type=UsesDependency
+dependency28.from=UIAtaques
+dependency28.to=Parrafo
+dependency28.type=UsesDependency
+dependency29.from=UIAtaques
+dependency29.to=TextoConsola
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 dependency29.type=UsesDependency
 dependency3.from=UITurno
 dependency3.to=ColoresUI
 dependency3.type=UsesDependency
+<<<<<<< HEAD
 dependency30.from=Criatura
 dependency30.to=UIInfoCriatura
 dependency30.type=UsesDependency
@@ -96,6 +161,44 @@ dependency36.type=UsesDependency
 dependency4.from=Logger
 dependency4.to=Criatura
 dependency4.type=UsesDependency
+=======
+dependency30.from=UIAtaques
+dependency30.to=BotonReactor
+dependency30.type=UsesDependency
+dependency31.from=Anuncio
+dependency31.to=Boton
+dependency31.type=UsesDependency
+dependency32.from=Boton
+dependency32.to=BotonReactor
+dependency32.type=UsesDependency
+dependency33.from=UIInfoCriatura
+dependency33.to=Criatura
+dependency33.type=UsesDependency
+dependency34.from=Criatura
+dependency34.to=UIInfoCriatura
+dependency34.type=UsesDependency
+dependency35.from=Criatura
+dependency35.to=MyGreenfootImage
+dependency35.type=UsesDependency
+dependency36.from=Criatura
+dependency36.to=PantallaDuelo
+dependency36.type=UsesDependency
+dependency37.from=Final
+dependency37.to=MyGreenfootImage
+dependency37.type=UsesDependency
+dependency38.from=BotonReactor
+dependency38.to=Boton
+dependency38.type=UsesDependency
+dependency39.from=BotonReactor
+dependency39.to=UIAtaques
+dependency39.type=UsesDependency
+dependency4.from=Logger
+dependency4.to=Criatura
+dependency4.type=UsesDependency
+dependency40.from=BotonReactor
+dependency40.to=Criatura
+dependency40.type=UsesDependency
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 dependency5.from=PantallaPrincipal
 dependency5.to=Boton
 dependency5.type=UsesDependency
@@ -103,6 +206,7 @@ dependency6.from=PantallaPrincipal
 dependency6.to=Comenzar
 dependency6.type=UsesDependency
 dependency7.from=PantallaPrincipal
+<<<<<<< HEAD
 dependency7.to=PantallaDuelo
 dependency7.type=UsesDependency
 dependency8.from=PantallaFinal
@@ -110,14 +214,29 @@ dependency8.to=Final
 dependency8.type=UsesDependency
 dependency9.from=PantallaDuelo
 dependency9.to=Texto
+=======
+dependency7.to=GifImage
+dependency7.type=UsesDependency
+dependency8.from=PantallaPrincipal
+dependency8.to=PantallaDuelo
+dependency8.type=UsesDependency
+dependency9.from=PantallaPrincipal
+dependency9.to=GifLoop
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 dependency9.type=UsesDependency
 editor.fx.0.height=739
 editor.fx.0.width=816
 editor.fx.0.x=392
 editor.fx.0.y=54
+<<<<<<< HEAD
 height=920
 package.numDependencies=36
 package.numTargets=22
+=======
+height=916
+package.numDependencies=40
+package.numTargets=24
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -133,48 +252,69 @@ readme.x=10
 readme.y=10
 simulation.speed=51
 target1.height=70
-target1.name=MyGreenfootImage
+target1.name=UITurno
 target1.showInterface=false
 target1.type=ClassTarget
-target1.width=150
+target1.width=120
 target1.x=0
 target1.y=0
 target10.height=70
+<<<<<<< HEAD
 target10.name=Parrafo
+=======
+target10.name=PantallaFinal
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target10.showInterface=false
 target10.type=ClassTarget
 target10.width=120
 target10.x=0
 target10.y=0
 target11.height=70
+<<<<<<< HEAD
 target11.name=Texto
+=======
+target11.name=PantallaDuelo
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target11.showInterface=false
 target11.type=ClassTarget
 target11.width=120
 target11.x=0
 target11.y=0
 target12.height=70
+<<<<<<< HEAD
 target12.name=UIAtaques
+=======
+target12.name=Final
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target12.showInterface=false
 target12.type=ClassTarget
 target12.width=120
 target12.x=0
 target12.y=0
 target13.height=70
+<<<<<<< HEAD
 target13.name=PantallaPrincipal
+=======
+target13.name=SargentoEnrico
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target13.showInterface=false
 target13.type=ClassTarget
 target13.width=120
 target13.x=0
 target13.y=0
 target14.height=70
+<<<<<<< HEAD
 target14.name=Boton
+=======
+target14.name=GifLoop
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target14.showInterface=false
 target14.type=ClassTarget
 target14.width=120
 target14.x=0
 target14.y=0
 target15.height=70
+<<<<<<< HEAD
 target15.name=PantallaFinal
 target15.showInterface=false
 target15.type=ClassTarget
@@ -183,111 +323,200 @@ target15.x=0
 target15.y=0
 target16.height=70
 target16.name=BotonReactor
+=======
+target15.name=MyGreenfootImage
+target15.showInterface=false
+target15.type=ClassTarget
+target15.width=150
+target15.x=0
+target15.y=0
+target16.height=70
+target16.name=Comenzar
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target16.showInterface=false
 target16.type=ClassTarget
 target16.width=120
 target16.x=0
 target16.y=0
 target17.height=70
+<<<<<<< HEAD
 target17.name=UIInfoCriatura
+=======
+target17.name=JuanSlug
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target17.showInterface=false
 target17.type=ClassTarget
 target17.width=120
 target17.x=0
 target17.y=0
 target18.height=70
+<<<<<<< HEAD
 target18.name=PantallaDuelo
+=======
+target18.name=MartaSlug
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target18.showInterface=false
 target18.type=ClassTarget
 target18.width=120
 target18.x=0
 target18.y=0
 target19.height=70
+<<<<<<< HEAD
 target19.name=TextoConsola
+=======
+target19.name=Anuncio
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target19.showInterface=false
 target19.type=ClassTarget
 target19.width=120
 target19.x=0
 target19.y=0
 target2.height=70
+<<<<<<< HEAD
 target2.name=Comenzar
+=======
+target2.name=RicardoBazooka
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=120
 target2.x=0
 target2.y=0
 target20.height=70
+<<<<<<< HEAD
 target20.name=Criatura
 target20.showInterface=false
 target20.type=AbstractTarget
+=======
+target20.name=GifImage
+target20.showInterface=false
+target20.type=ClassTarget
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target20.width=120
 target20.x=0
 target20.y=0
 target21.height=70
+<<<<<<< HEAD
 target21.name=Final
+=======
+target21.name=BotonReactor
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=120
 target21.x=0
 target21.y=0
 target22.height=70
+<<<<<<< HEAD
 target22.name=SargentoEnrico
+=======
+target22.name=UIInfoCriatura
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target22.showInterface=false
 target22.type=ClassTarget
 target22.width=120
 target22.x=0
 target22.y=0
+<<<<<<< HEAD
 target3.height=70
 target3.name=UITurno
+=======
+target23.height=70
+target23.name=TextoConsola
+target23.showInterface=false
+target23.type=ClassTarget
+target23.width=120
+target23.x=0
+target23.y=0
+target24.height=70
+target24.name=Criatura
+target24.showInterface=false
+target24.type=AbstractTarget
+target24.width=120
+target24.x=0
+target24.y=0
+target3.height=70
+target3.name=ColoresUI
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target3.showInterface=false
-target3.type=ClassTarget
+target3.type=InterfaceTarget
 target3.width=120
 target3.x=0
 target3.y=0
 target4.height=70
+<<<<<<< HEAD
 target4.name=JuanSlug
+=======
+target4.name=Logger
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=120
 target4.x=0
 target4.y=0
 target5.height=70
+<<<<<<< HEAD
 target5.name=MartaSlug
+=======
+target5.name=Parrafo
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=120
 target5.x=0
 target5.y=0
 target6.height=70
+<<<<<<< HEAD
 target6.name=RicardoBazooka
+=======
+target6.name=Texto
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target6.showInterface=false
 target6.type=ClassTarget
 target6.width=120
 target6.x=0
 target6.y=0
 target7.height=70
+<<<<<<< HEAD
 target7.name=ColoresUI
+=======
+target7.name=UIAtaques
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target7.showInterface=false
 target7.type=InterfaceTarget
 target7.width=120
 target7.x=0
 target7.y=0
 target8.height=70
+<<<<<<< HEAD
 target8.name=Logger
+=======
+target8.name=PantallaPrincipal
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
 target8.y=0
 target9.height=70
+<<<<<<< HEAD
 target9.name=Anuncio
+=======
+target9.name=Boton
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1101
 world.lastInstantiated=PantallaFinal
 xPosition=481
+=======
+width=1616
+world.lastInstantiated=PantallaPrincipal
+xPosition=0
+>>>>>>> 6855468c6d3bb8095fcb43895b0ed150c7c38a74
 yPosition=0
