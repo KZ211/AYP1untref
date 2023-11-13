@@ -12,7 +12,7 @@ public class JuanSlug extends Criatura {
             ,
                 "daña y aumenta tu defensa",
                 "hay probablidades de que falle y hacerte daño o causar daño verdadero igual a la mitad de tu ataque a un enemigo" },
-            new int[] {500,35,3});
+            new int[] {50,35,3});
     }
 
     public JuanSlug(String nombre) {

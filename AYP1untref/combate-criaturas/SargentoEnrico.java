@@ -16,7 +16,7 @@ public class SargentoEnrico extends Criatura
             new String[] { "-Machetazo  -", "- No me dolió -","- Grito de Guerra -", "- Reprimir -" },
             imagenEspejada,
             new String[] { "Causa un daño moderado a un enemigo", "Te cura pero disminuye tu ataque y defensa", "Hace daño y aumenta tu defensa", "Hace daño y aumenta muy poco tu ataque y defensa a cambio de un poco de tu vida" },
-            new int[] {250, 55,3});
+            new int[] {25, 55,3});
     }
 
     public  SargentoEnrico(String nombre) {
