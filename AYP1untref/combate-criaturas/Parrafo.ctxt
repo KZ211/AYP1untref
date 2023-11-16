@@ -2,12 +2,17 @@
 comment0.target=Parrafo
 comment1.params=text\ size\ color\ width\ height
 comment1.target=Parrafo(java.lang.String,\ int,\ greenfoot.Color,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Parrafo.\r\n\ \r\n\ @param\ text\ \ \ Texto\ que\ se\ muestra\ en\ el\ p\u00E1rrafo.\r\n\ @param\ size\ \ \ Tama\u00F1o\ de\ la\ fuente\ del\ p\u00E1rrafo.\r\n\ @param\ color\ \ Color\ del\ texto\ del\ p\u00E1rrafo.\r\n\ @param\ width\ \ Ancho\ del\ \u00E1rea\ del\ p\u00E1rrafo.\r\n\ @param\ height\ Alto\ del\ \u00E1rea\ del\ p\u00E1rrafo.\r\n
 comment2.params=size
 comment2.target=void\ setSize(int)
+comment2.text=\r\n\ Establece\ el\ tama\u00F1o\ de\ la\ fuente\ y\ recalcula\ el\ texto\ envuelto.\r\n\ \r\n\ @param\ size\ Tama\u00F1o\ de\ la\ fuente\ a\ establecer.\r\n
 comment3.params=text
 comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ Establece\ el\ texto\ a\ mostrar\ y\ recalcula\ el\ texto\ envuelto.\r\n\ \r\n\ @param\ text\ Texto\ a\ establecer.\r\n
 comment4.params=
 comment4.target=void\ wrapText()
+comment4.text=\r\n\ M\u00E9todo\ interno\ para\ envolver\ el\ texto\ seg\u00FAn\ el\ ancho\ establecido.\r\n
 comment5.params=
 comment5.target=void\ render()
+comment5.text=\r\n\ M\u00E9todo\ interno\ para\ renderizar\ el\ texto\ en\ la\ imagen\ del\ actor.\r\n
 numComments=6

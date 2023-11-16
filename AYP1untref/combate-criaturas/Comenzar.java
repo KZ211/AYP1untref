@@ -1,32 +1,31 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 import java.util.List;
+
 /**
- * Write a description of class Comenzar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Actor que representa un botón de "Comenzar".
  */
-public class Comenzar extends Actor
-{
-    /**
-     * Act - do whatever the Comenzar wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    Boton comenzar;
+public class Comenzar extends Actor {
+
     private Boton comenzar_;
-
     private final MyGreenfootImage imagenOriginal;
-
     private boolean visualHover;
     private boolean visualSeleccionado;
+
+    /**
+     * Constructor de la clase Comenzar.
+     * @param image La imagen asociada al botón.
+     * @param comenzar El botón que representa la acción de "Comenzar".
+     */
     public Comenzar(String image, Boton comenzar){
         setImage(new GreenfootImage("comenzar.png"));
-        this.comenzar_=comenzar;
-
+        this.comenzar_ = comenzar;
         this.imagenOriginal = new MyGreenfootImage(getImage());
-        
     }
 
+    /**
+     * Método act que se ejecuta cuando se hace clic o pasa el mouse sobre el botón.
+     * Actualiza la apariencia del botón según la interacción del usuario.
+     */
     public void act(){    
         boolean _visualHover = visualHover;
         boolean _visualSeleccionado = visualSeleccionado;
@@ -53,22 +52,21 @@ public class Comenzar extends Actor
         }
     }   
 
+    /**
+     * Actualiza la representación visual del botón.
+     */
     public void render() {
         MyGreenfootImage nuevaImagen = new MyGreenfootImage(imagenOriginal) {
-                public void configurar() {
-
-                    if (visualHover) {
-                        scaleToRatio(1.10);
-                        
-                    }
-                    if (visualSeleccionado) {
-                        highlight();
-                    }
-
+            public void configurar() {
+                if (visualHover) {
+                    scaleToRatio(1.10);
                 }
-            };
+                if (visualSeleccionado) {
+                    highlight();
+                }
+            }
+        };
 
         setImage(nuevaImagen);
     }
-
 }

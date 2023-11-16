@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Anuncio
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Anuncio\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=Anuncio()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Anuncio.\r\n\ Crea\ un\ actor\ que\ muestra\ un\ anuncio\ de\ turno\ con\ una\ imagen\ predefinida\ y\ la\ escala\ a\ la\ mitad.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ M\u00E9todo\ act\ que\ se\ ejecuta\ constantemente\ en\ el\ mundo.\r\n\ No\ realiza\ ninguna\ acci\u00F3n\ en\ este\ caso.\r\n
 numComments=3

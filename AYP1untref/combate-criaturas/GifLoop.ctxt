@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=GifLoop
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ GifLoop\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=gifFileName
 comment1.target=GifLoop(java.lang.String)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ GifLoop.\r\n\ Inicializa\ la\ imagen\ GIF\ y\ establece\ la\ imagen\ actual\ del\ GIF\ como\ la\ imagen\ del\ actor.\r\n\ \r\n\ @param\ gifFileName\ Nombre\ del\ archivo\ GIF\ a\ utilizar.\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ M\u00E9todo\ act\:\ se\ ejecuta\ en\ cada\ ciclo\ de\ actuar\ del\ mundo.\r\n\ Actualiza\ la\ imagen\ que\ se\ muestra\ si\ el\ GIF\ est\u00E1\ en\ ejecuci\u00F3n.\r\n
 numComments=3

@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=SargentoBrocos
+comment0.text=\r\n\ La\ clase\ SargentoBrocos\ representa\ a\ una\ criatura\ espec\u00EDfica\ con\ habilidades\ de\ ataque\ variadas.\r\n
+comment1.params=nombre\ imagenEspejada
+comment1.target=SargentoBrocos(java.lang.String,\ boolean)
+comment1.text=\r\n\ Constructor\ para\ la\ clase\ SargentoBrocos\ que\ inicializa\ sus\ atributos\ con\ valores\ predeterminados.\r\n\ @param\ nombre\ Nombre\ de\ la\ criatura.\r\n\ @param\ imagenEspejada\ Booleano\ que\ indica\ si\ la\ imagen\ est\u00E1\ espejada.\r\n
+comment2.params=nombre
+comment2.target=SargentoBrocos(java.lang.String)
+comment2.text=\r\n\ Constructor\ alternativo\ para\ la\ clase\ SargentoBrocos\ que\ inicializa\ sus\ atributos\ con\ valores\ predeterminados\ y\ con\ imagen\ espejada.\r\n\ @param\ nombre\ Nombre\ de\ la\ criatura.\r\n
+comment3.params=otro
+comment3.target=void\ atacar1(Criatura)
+comment3.text=\r\n\ Ataque\ de\ tipo\ 1\ de\ SargentoBrocos\ que\ causa\ da\u00F1o\ a\ otra\ criatura.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
+comment4.params=otro
+comment4.target=void\ atacar2(Criatura)
+comment4.text=\r\n\ Ataque\ de\ tipo\ 2\ de\ SargentoBrocos\ que\ aumenta\ mucho\ su\ ataque.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
+comment5.params=otro
+comment5.target=void\ atacar3(Criatura)
+comment5.text=\r\n\ Ataque\ de\ tipo\ 3\ de\ SargentoBrocos\ que\ da\u00F1a\ y\ disminuye\ la\ defensa\ del\ enemigo.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
+comment6.params=otro
+comment6.target=void\ atacar4(Criatura)
+comment6.text=\r\n\ Ataque\ de\ tipo\ 4\ de\ SargentoBrocos\ que\ intercambia\ la\ vida\ de\ un\ enemigo\ y\ la\ tuya.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
+numComments=7

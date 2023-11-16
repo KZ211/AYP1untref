@@ -2,8 +2,11 @@
 comment0.target=UIInfoCriatura
 comment1.params=criatura
 comment1.target=UIInfoCriatura(Criatura)
+comment1.text=\r\n\ Constructor\ de\ la\ interfaz\ de\ informaci\u00F3n\ de\ la\ criatura.\r\n\ \r\n\ @param\ criatura\ La\ criatura\ asociada\ a\ esta\ interfaz.\r\n
 comment2.params=world
 comment2.target=void\ addedToWorld(greenfoot.World)
+comment2.text=\r\n\ M\u00E9todo\ llamado\ cuando\ se\ agrega\ al\ mundo\ la\ interfaz.\r\n\ Actualiza\ la\ informaci\u00F3n\ visual\ de\ la\ criatura.\r\n\ \r\n\ @param\ world\ El\ mundo\ al\ que\ se\ agrega\ la\ interfaz.\r\n
 comment3.params=
 comment3.target=void\ actualizar()
+comment3.text=\r\n\ Actualiza\ la\ informaci\u00F3n\ visual\ de\ la\ interfaz\ seg\u00FAn\ los\ datos\ de\ la\ criatura.\r\n
 numComments=4
