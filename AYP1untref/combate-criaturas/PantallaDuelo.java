@@ -45,6 +45,7 @@ public class PantallaDuelo extends World {
         criaturas[1] = new MartaSlug("Marta Slug");
         criaturas[2] = new SargentoEnrico("Sargento Enrico", true);
         criaturas[3] = new SargentoBrocos("Sargento Brocos", true);
+        
 
         addGif();
         addObject(criaturas[0], 150, 220);
@@ -110,7 +111,7 @@ public class PantallaDuelo extends World {
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
             if(criaturas[i].vida == 0){
-            System.out.println(criaturas[i].nombre + " Murio!");
+            System.out.println("Muerte: "+criaturas[i].nombre + " Murio!");
             removeObject(this.criaturas[i]);
             removeObject(this.gifLoop[i]);
             personajesMuertos++;
@@ -118,12 +119,18 @@ public class PantallaDuelo extends World {
         }
         
         turnoTexto.actualizarTexto("Ronda " + ronda + " | Turno " + turno);
+        System.out.println("********************************");
+        System.out.println("******Ronda: "+ ronda +" | Turno: " + turno + "*******");
+        System.out.println("********************************");
+        System.out.println(".");
         uiAtaques.asignarCriaturaActual(criaturas[personaje]);
         }
         
     /**
      * parametro: c es la Criatura en la que se hizo clic.
-     * post:Maneja el evento de clic en una criatura durante el juego.
+     * post:Maneja el evento de clic en una criatura durante el juego, pasando al siguiente turno solo si la criatura ejecuto una
+     *      accion, siendo tambien la condicion de victoria, que los 2 integrantes de un equipo tengan su vida en 0, aparte de escuchar
+     *      si los estados estan activos.
      */
     public void click(Criatura c){
         uiAtaques.click(c);

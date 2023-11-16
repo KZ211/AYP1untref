@@ -138,7 +138,7 @@ public abstract class Criatura extends Actor {
 
         setImage(nuevaImagen);
     }
-    
+
     // Métodos para acciones de ataque, curación y cálculo de daño
     /**
      * Realiza un ataque de tipo 1 a otra criatura.
@@ -147,7 +147,7 @@ public abstract class Criatura extends Actor {
     public void atacar1(Criatura otro){
         otro.recibirDaño(this);
     }
-    
+
     /**
      * Realiza un ataque de tipo 2 a otra criatura.
      * @param otro Criatura objetivo del ataque.
@@ -221,49 +221,64 @@ public abstract class Criatura extends Actor {
         double numeroAleatorio = (double) (Math.random() * (1.25 - 0.5) + 0.5);
         return numeroAleatorio;
     }
-    
+
+    /**
+     * Compara dos strings y verifica si son iguales.
+     * @param a Primer string a comparar.
+     * @param b Segundo string a comparar.
+     * @return true si los strings son iguales, false si son diferentes.
+     */
     protected boolean compararElementos(String a, String b){
         return a == b;
     }
-    
+
+    /**
+     * Calcula si hay bonificaciones de daño basadas en los tipos de elementos de las criaturas involucradas.
+     * @param otro Objeto de tipo Criatura que representa al objetivo del ataque.
+     */
     protected void golpeElemento(Criatura otro){
         if((compararElementos(this.tipo, "fuego") && 
             compararElementos(otro.tipo,"agua")) || 
-            (compararElementos(this.tipo, "fuego") && 
+        (compararElementos(this.tipo, "fuego") && 
             compararElementos(otro.tipo, "tierra")) ||
-            (compararElementos(this.tipo, "agua")  &&
+        (compararElementos(this.tipo, "agua")  &&
             compararElementos(otro.tipo, "tierra")) ||
-            (compararElementos(this.tipo, "tierra") &&
+        (compararElementos(this.tipo, "tierra") &&
             compararElementos(otro.tipo, "agua"))){
             this.bonusElemento = 1.5;
-            System.out.println("Bonus por elemento");
+            System.out.println("Bonus: Bonus por elemento");
         }else{
             if((compararElementos(this.tipo, "fuego") && 
-            compararElementos(otro.tipo,"fuego")) || 
+                compararElementos(otro.tipo,"fuego")) || 
             (compararElementos(this.tipo, "tierra") && 
-            compararElementos(otro.tipo, "tierra")) ||
+                compararElementos(otro.tipo, "tierra")) ||
             (compararElementos(this.tipo, "agua")  &&
-            compararElementos(otro.tipo, "agua")) ||
+                compararElementos(otro.tipo, "agua")) ||
             (compararElementos(this.tipo, "agua") &&
-            compararElementos(otro.tipo, "fuego")) ||
+                compararElementos(otro.tipo, "fuego")) ||
             (compararElementos(this.tipo, "tierra") &&
-            compararElementos(otro.tipo, "fuego"))){
+                compararElementos(otro.tipo, "fuego"))){
                 this.bonusElemento = 1;
-                System.out.println("No hay bonus por elemento");
+                System.out.println("Bonus: No hay bonus por elemento");
             }
         }
     }
-    
+
+    /**
+     * Verifica si se produce un golpe crítico.
+     * @param otro Objeto de tipo Criatura que representa al objetivo del ataque.
+     * @return 4 si se produce un golpe crítico, 1 si no se produce.
+     */
     protected double golpeCritico(Criatura otro){
         double numero = Math.random();
         double golpe = 4;
         if(numero > 0.85){
-            System.out.println(otro.nombre + " genero un golpe CRITICO!");
+            System.out.println("Critico: "+otro.nombre + " genero un golpe CRITICO!");
             return golpe;
         }
         return 1;
     }
-    
+
     /**
      * Calcula el ataque de la criatura teniendo en cuenta la defensa del objetivo.
      * @param defensa Defensa del objetivo.
@@ -277,7 +292,7 @@ public abstract class Criatura extends Actor {
         this.dañoFormula = (int) dañoAtaque;
         return dañoDelAtaque;
     }
-    
+
     /**
      * Recibe daño de una criatura atacante.
      * @param atacante Criatura que realiza el ataque.
@@ -289,7 +304,7 @@ public abstract class Criatura extends Actor {
         uiInfoCriatura.actualizar();
         return dañoFormula;
     }
-    
+
     /**
      * Realiza una curación a la criatura.
      * @param otro Criatura a la que se le realizará la curación.
@@ -301,46 +316,62 @@ public abstract class Criatura extends Actor {
         }
         uiInfoCriatura.actualizar();
     }
-    
+
+    /**
+     * Controla el efecto de quemadura en la criatura.
+     */
     protected void quemadura(){
         if(this.quemaduraActiva == true){
             this.vida -= 2;
             uiInfoCriatura.actualizar();
             this.tiempoDeEfectoQuemadura--;
-            System.out.println(this.nombre + "Esta recibiendo (2) de daño por quemadura, tiempo restante del efecto: (" 
-            + this.tiempoDeEfectoQuemadura + ") turnos");
+            System.out.println("Quemadura: "+this.nombre + "Esta recibiendo (2) de daño por quemadura, tiempo restante del efecto: (" 
+                + this.tiempoDeEfectoQuemadura + ") turnos");
             if(this.tiempoDeEfectoQuemadura == 0){
                 this.quemaduraActiva = false;
             }
         }
     }
-    
+
+    /**
+     * Controla el efecto de curación en la criatura.
+     */
     protected void curacion(){
         if(this.curacionActiva == true){
             this.vida += 2;
             uiInfoCriatura.actualizar();
             this.tiempoDeEfecto--;
-            System.out.println(this.nombre + "Esta recibiendo (2) de curacion, tiempo restante del efecto: (" 
-            + this.tiempoDeEfecto + ") turnos");
+            System.out.println("Curacion: "+this.nombre + "Esta recibiendo (2) de curacion, tiempo restante del efecto: (" 
+                + this.tiempoDeEfecto + ") turnos");
             if(this.tiempoDeEfecto == 0){
                 this.curacionActiva = false;
             }
         }
     }
-    
+
+    /**
+     * Activa el efecto de quemadura en la criatura.
+     */
     protected void activarQuemadura(){
         this.quemaduraActiva = true;
     }
-    
+
+    /**
+     * Activa el efecto de curación en la criatura.
+     */
     protected void activarCuracion(){
         this.curacionActiva = true;
         this.tiempoDeEfecto = 3;
     }
-    
+
+    /**
+     * Obtiene el estado actual de la quemadura de la criatura.
+     * @return true si la quemadura está activa, false si no lo está.
+     */
     protected boolean getEstadoQuemadura(){
         return this.quemaduraActiva;
     }
-    
+
     /**
      * Obtiene la vida actual de la criatura.
      * @return Vida actual de la criatura.
@@ -366,10 +397,6 @@ public abstract class Criatura extends Actor {
      */
     public boolean getCriaturaAtaco(){
         return this.criaturaAtaco;
-    }
-    
-    public int getVelocidad(){
-        return this.estadisticas[3];
     }
 
     /**

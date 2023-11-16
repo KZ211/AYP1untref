@@ -8,7 +8,7 @@ public class PantallaPrincipal extends World {
     private GreenfootSound sound;
     
     private PantallaDuelo mundoDuelo;
-
+    
     /**
      * Constructor de la clase PantallaPrincipal.
      * Crea una pantalla principal del juego con una imagen de fondo, un botón para comenzar,
@@ -26,6 +26,7 @@ public class PantallaPrincipal extends World {
         addObject(comenzar, 480, 550);
         addTropaGif();
         addMusicPantallaPrincipal();
+        limpiarConsola();
     }
     
     /**
@@ -60,10 +61,11 @@ public class PantallaPrincipal extends World {
     }
     
     /**
-     * Método para manejar el clic en el botón para comenzar el juego.
-     * Cambia el mundo a la pantalla de juego (PantallaDuelo), detiene la música de la pantalla principal
-     * y agrega música de fondo a la pantalla de juego.
-     * @param c El botón en el que se hizo clic.
+     * parametro: c El botón en el que se hizo clic.
+     * 
+     * post:Método para manejar el clic en el botón para comenzar el juego. Cambia el mundo a la pantalla de juego (PantallaDuelo), 
+     *      detiene la música de la pantalla principal
+     *      y agrega música de fondo a la pantalla de juego.
      */
     public void click(Boton c) {
         Greenfoot.setWorld(mundoDuelo);
@@ -72,13 +74,23 @@ public class PantallaPrincipal extends World {
     }
 
     /**
-     * Método para manejar el evento de pasar el mouse sobre un botón en la pantalla principal.
-     * @param c El botón sobre el que se pasa el mouse.
+     * parametro: c El botón sobre el que se pasa el mouse.
+     * 
+     * post: Método para manejar el evento de pasar el mouse sobre un botón en la pantalla principal.
      */
     public void hover(Boton c) {
         if (hoverObjetivo == c) {
             return;
         }
         hoverObjetivo = c;
+    }
+    
+    /**
+     * post: Simula un clear a la consola dejandola en blanco.
+     */
+    public void limpiarConsola(){
+        for (int i = 0; i < 40; i++) {
+            System.out.println();
+        }
     }
 }

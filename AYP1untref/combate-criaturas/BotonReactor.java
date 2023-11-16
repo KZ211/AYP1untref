@@ -38,13 +38,13 @@ public class BotonReactor {
             uiAtaques.ataque = () -> {
                 if (puedeAtacarlo(uiAtaques.ataqueObjetivo)) {
                     atacar(uiAtaques.ataqueObjetivo);
-                    uiAtaques.consola.setText(criaturaActual + " Ataco a " + 
-                    uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton() +
-                    " generandole (" + ((int) uiAtaques.ataqueObjetivo.getDañoHecho())+ ") de daño");
-                    System.out.println(criaturaActual + " Ataco a " + 
-                    uiAtaques.ataqueObjetivo + " con su ataque " + boton.getTextoBoton() +
-                    " generandole (" + uiAtaques.ataqueObjetivo.getDañoHecho() + ") de daño");
-                    System.out.println(".");   
+                        uiAtaques.consola.setText("Ataque: ["+criaturaActual + "] Ataco a (" + 
+                        uiAtaques.ataqueObjetivo + ") con su ataque [" + boton.getTextoBoton() +
+                        "] generandole (" + (uiAtaques.ataqueObjetivo.getDañoHecho())+ ") de daño");
+                        System.out.println("Ataque: ["+criaturaActual + "] Ataco a [" + 
+                        uiAtaques.ataqueObjetivo + "] con su ataque [" + boton.getTextoBoton() +
+                        "] generandole (" + uiAtaques.ataqueObjetivo.getDañoHecho() + ") de daño");
+                        System.out.println(".");
                 }
             };
             uiAtaques.resetColorBotones();
