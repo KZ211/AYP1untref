@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=PantallaPrincipal
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PantallaPrincipal\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
 comment1.target=PantallaPrincipal()
+<<<<<<< HEAD
 comment2.params=c
 comment2.target=void\ click(Boton)
 comment3.params=
@@ -20,3 +20,25 @@ comment8.target=void\ click(Boton)
 comment9.params=c
 comment9.target=void\ hover(Boton)
 numComments=10
+=======
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ PantallaPrincipal.\r\n\ Crea\ una\ pantalla\ principal\ del\ juego\ con\ una\ imagen\ de\ fondo,\ un\ bot\u00F3n\ para\ comenzar,\r\n\ una\ animaci\u00F3n\ (GIF)\ y\ m\u00FAsica\ de\ fondo.\r\n
+comment2.params=
+comment2.target=void\ addTropaGif()
+comment2.text=\r\n\ Agrega\ una\ animaci\u00F3n\ (GIF)\ al\ mundo.\r\n
+comment3.params=
+comment3.target=void\ addMusicPantallaPrincipal()
+comment3.text=\r\n\ Agrega\ m\u00FAsica\ de\ fondo\ a\ la\ pantalla\ principal.\r\n
+comment4.params=
+comment4.target=void\ stopMusicPantallaPrincipal()
+comment4.text=\r\n\ Detiene\ la\ m\u00FAsica\ de\ fondo\ en\ la\ pantalla\ principal.\r\n
+comment5.params=
+comment5.target=void\ addMusicPantallaDuelo()
+comment5.text=\r\n\ Agrega\ m\u00FAsica\ de\ fondo\ a\ la\ pantalla\ de\ juego\ (PantallaDuelo).\r\n
+comment6.params=c
+comment6.target=void\ click(Boton)
+comment6.text=\r\n\ M\u00E9todo\ para\ manejar\ el\ clic\ en\ el\ bot\u00F3n\ para\ comenzar\ el\ juego.\r\n\ Cambia\ el\ mundo\ a\ la\ pantalla\ de\ juego\ (PantallaDuelo),\ detiene\ la\ m\u00FAsica\ de\ la\ pantalla\ principal\r\n\ y\ agrega\ m\u00FAsica\ de\ fondo\ a\ la\ pantalla\ de\ juego.\r\n\ @param\ c\ El\ bot\u00F3n\ en\ el\ que\ se\ hizo\ clic.\r\n
+comment7.params=c
+comment7.target=void\ hover(Boton)
+comment7.text=\r\n\ M\u00E9todo\ para\ manejar\ el\ evento\ de\ pasar\ el\ mouse\ sobre\ un\ bot\u00F3n\ en\ la\ pantalla\ principal.\r\n\ @param\ c\ El\ bot\u00F3n\ sobre\ el\ que\ se\ pasa\ el\ mouse.\r\n
+numComments=8
+>>>>>>> 3e6d5b1bd8b22af28d9144aca53b7e54a93a27bb

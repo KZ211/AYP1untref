@@ -19,6 +19,15 @@ public class Parrafo extends Actor {
     private int charWidth;
     private String wrappedText;
 
+    /**
+     * Constructor de la clase Parrafo.
+     * 
+     * @param text   Texto que se muestra en el párrafo.
+     * @param size   Tamaño de la fuente del párrafo.
+     * @param color  Color del texto del párrafo.
+     * @param width  Ancho del área del párrafo.
+     * @param height Alto del área del párrafo.
+     */
     public Parrafo(String text, int size, Color color, int width, int height) {
         this.fontColor = color;
         this.width = width;
@@ -28,10 +37,15 @@ public class Parrafo extends Actor {
         setSize(size);
     }
 
+    /**
+     * Establece el tamaño de la fuente y recalcula el texto envuelto.
+     * 
+     * @param size Tamaño de la fuente a establecer.
+     */
     public void setSize(int size) {
         this.fontSize = size;
 
-        // Calculate char width in monospaced font
+        // Calcular el ancho de un carácter en fuente monoespaciada
         java.awt.Font font = new java.awt.Font(MONOSPACED_FONT_FAMILY, java.awt.Font.PLAIN, this.fontSize);
         java.awt.Canvas placeholder = new java.awt.Canvas();
         java.awt.FontMetrics fm = placeholder.getFontMetrics(font);
@@ -41,6 +55,11 @@ public class Parrafo extends Actor {
         render();
     }
 
+    /**
+     * Establece el texto a mostrar y recalcula el texto envuelto.
+     * 
+     * @param text Texto a establecer.
+     */
     public void setText(String text) {
         this.originalText = text;
 
@@ -48,6 +67,9 @@ public class Parrafo extends Actor {
         render();
     }
 
+    /**
+     * Método interno para envolver el texto según el ancho establecido.
+     */
     protected void wrapText() {
         int maxChars = (width - MARGIN_X * 2) / charWidth;
 
@@ -73,6 +95,9 @@ public class Parrafo extends Actor {
         this.wrappedText = finalText;
     }
 
+    /**
+     * Método interno para renderizar el texto en la imagen del actor.
+     */
     private void render() {
         GreenfootImage img = new GreenfootImage(width, height);
         img.setColor(fontColor);

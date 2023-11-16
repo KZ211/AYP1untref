@@ -1,16 +1,22 @@
 #BlueJ class context
 comment0.target=SargentoEnrico
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ PikachuEnemigo1\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ La\ clase\ SargentoEnrico\ representa\ a\ una\ criatura\ espec\u00EDfica\ con\ habilidades\ de\ ataque\ variadas.\r\n
 comment1.params=nombre\ imagenEspejada
 comment1.target=SargentoEnrico(java.lang.String,\ boolean)
+comment1.text=\r\n\ Constructor\ para\ la\ clase\ SargentoEnrico\ que\ inicializa\ sus\ atributos\ con\ valores\ predeterminados.\r\n\ @param\ nombre\ Nombre\ de\ la\ criatura.\r\n\ @param\ imagenEspejada\ Booleano\ que\ indica\ si\ la\ imagen\ est\u00E1\ espejada.\r\n
 comment2.params=nombre
 comment2.target=SargentoEnrico(java.lang.String)
+comment2.text=\r\n\ Constructor\ alternativo\ para\ la\ clase\ SargentoEnrico\ que\ inicializa\ sus\ atributos\ con\ valores\ predeterminados\ y\ con\ imagen\ espejada.\r\n\ @param\ nombre\ Nombre\ de\ la\ criatura.\r\n
 comment3.params=otro
 comment3.target=void\ atacar1(Criatura)
+comment3.text=\r\n\ Ataque\ de\ tipo\ 1\ de\ SargentoEnrico\ que\ causa\ da\u00F1o\ a\ otra\ criatura.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
 comment4.params=otro
 comment4.target=void\ atacar2(Criatura)
+comment4.text=\r\n\ Ataque\ de\ tipo\ 2\ de\ SargentoEnrico\ que\ cura\ a\ lo\ largo\ de\ 3\ turnos\ pero\ disminuye\ el\ ataque\ y\ defensa\ de\ la\ criatura.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
 comment5.params=otro
 comment5.target=void\ atacar3(Criatura)
+comment5.text=\r\n\ Ataque\ de\ tipo\ 3\ de\ SargentoEnrico\ que\ hace\ da\u00F1o\ y\ aumenta\ la\ defensa.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
 comment6.params=otro
 comment6.target=void\ atacar4(Criatura)
+comment6.text=\r\n\ Ataque\ de\ tipo\ 4\ de\ SargentoEnrico\ que\ hace\ da\u00F1o\ al\ enemigo\ intercambiando\ vida\ por\ puntos\ de\ ataque.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
 numComments=7

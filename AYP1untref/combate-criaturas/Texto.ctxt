@@ -2,10 +2,14 @@
 comment0.target=Texto
 comment1.params=texto\ tam\ colorFrente\ colorFondo
 comment1.target=Texto(java.lang.String,\ int,\ greenfoot.Color,\ greenfoot.Color)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Texto\ que\ muestra\ texto\ con\ colores\ espec\u00EDficos.\r\n\ \r\n\ @param\ texto\ \ \ \ \ \ \ El\ texto\ a\ mostrar.\r\n\ @param\ tam\ \ \ \ \ \ \ \ \ Tama\u00F1o\ del\ texto.\r\n\ @param\ colorFrente\ Color\ del\ texto.\r\n\ @param\ colorFondo\ \ Color\ de\ fondo\ del\ texto.\r\n
 comment2.params=texto\ tam\ colorFrente\ colorFondo\ colorBorde
 comment2.target=Texto(java.lang.String,\ int,\ greenfoot.Color,\ greenfoot.Color,\ greenfoot.Color)
+comment2.text=\r\n\ Constructor\ de\ la\ clase\ Texto\ que\ muestra\ texto\ con\ colores\ espec\u00EDficos,\ incluyendo\ el\ color\ del\ borde.\r\n\ \r\n\ @param\ texto\ \ \ \ \ \ \ El\ texto\ a\ mostrar.\r\n\ @param\ tam\ \ \ \ \ \ \ \ \ Tama\u00F1o\ del\ texto.\r\n\ @param\ colorFrente\ Color\ del\ texto.\r\n\ @param\ colorFondo\ \ Color\ de\ fondo\ del\ texto.\r\n\ @param\ colorBorde\ \ Color\ del\ borde\ del\ texto.\r\n
 comment3.params=texto
 comment3.target=void\ actualizarTexto(java.lang.String)
+comment3.text=\r\n\ Actualiza\ el\ texto\ mostrado.\r\n\ \r\n\ @param\ texto\ El\ nuevo\ texto\ a\ mostrar.\r\n
 comment4.params=
 comment4.target=void\ render()
+comment4.text=\r\n\ M\u00E9todo\ interno\ para\ renderizar\ el\ texto\ en\ la\ imagen\ del\ actor.\r\n
 numComments=5

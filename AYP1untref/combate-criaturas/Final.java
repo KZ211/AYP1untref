@@ -1,10 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-/**
- * Write a description of class Comenzar here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+
 public class Final extends Actor
 {
     /**
@@ -18,6 +13,11 @@ public class Final extends Actor
 
     private boolean visualHover;
     private boolean visualSeleccionado;
+    
+    /**
+     * Constructor para la clase Final que inicializa sus atributos con valores predeterminados.
+     * @param fnl Objeto Final.
+     */
     public Final(Final fnl){
         setImage(new GreenfootImage("Metal_Slug_logo.png"));
         this.comenzar_=fnl;
@@ -25,12 +25,6 @@ public class Final extends Actor
         this.imagenOriginal = new MyGreenfootImage(getImage());
         this.imagenOriginal.scaleTo(250,250);
     }
-
-    public void act(){    
-        
-    }   
-
-
 }
 
 

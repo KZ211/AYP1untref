@@ -2,12 +2,17 @@
 comment0.target=TextoConsola
 comment1.params=text\ size\ color\ width\ height
 comment1.target=TextoConsola(java.lang.String,\ int,\ greenfoot.Color,\ int,\ int)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ TextoConsola\ que\ muestra\ texto\ con\ estilo\ de\ fuente\ monoespaciada.\r\n\ \r\n\ @param\ text\ \ \ El\ texto\ a\ mostrar.\r\n\ @param\ size\ \ \ Tama\u00F1o\ del\ texto.\r\n\ @param\ color\ \ Color\ del\ texto.\r\n\ @param\ width\ \ Ancho\ m\u00E1ximo\ del\ texto.\r\n\ @param\ height\ Altura\ del\ texto.\r\n
 comment2.params=size
 comment2.target=void\ setSize(int)
+comment2.text=\r\n\ Establece\ el\ tama\u00F1o\ de\ la\ fuente.\r\n\ \r\n\ @param\ size\ Tama\u00F1o\ del\ texto.\r\n
 comment3.params=text
 comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ Establece\ el\ texto\ a\ mostrar.\r\n\ \r\n\ @param\ text\ El\ nuevo\ texto\ a\ mostrar.\r\n
 comment4.params=
 comment4.target=void\ wrapText()
+comment4.text=\r\n\ M\u00E9todo\ interno\ para\ ajustar\ el\ texto\ para\ que\ encaje\ dentro\ del\ ancho\ especificado.\r\n
 comment5.params=
 comment5.target=void\ render()
+comment5.text=\r\n\ M\u00E9todo\ interno\ para\ renderizar\ el\ texto\ en\ la\ imagen\ del\ actor.\r\n
 numComments=6

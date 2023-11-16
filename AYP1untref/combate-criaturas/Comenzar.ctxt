@@ -1,12 +1,15 @@
 #BlueJ class context
 comment0.target=Comenzar
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Comenzar\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Actor\ que\ representa\ un\ bot\u00F3n\ de\ "Comenzar".\r\n
 comment1.params=image\ comenzar
 comment1.target=Comenzar(java.lang.String,\ Boton)
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ Comenzar.\r\n\ @param\ image\ La\ imagen\ asociada\ al\ bot\u00F3n.\r\n\ @param\ comenzar\ El\ bot\u00F3n\ que\ representa\ la\ acci\u00F3n\ de\ "Comenzar".\r\n
 comment2.params=
 comment2.target=void\ act()
+comment2.text=\r\n\ M\u00E9todo\ act\ que\ se\ ejecuta\ cuando\ se\ hace\ clic\ o\ pasa\ el\ mouse\ sobre\ el\ bot\u00F3n.\r\n\ Actualiza\ la\ apariencia\ del\ bot\u00F3n\ seg\u00FAn\ la\ interacci\u00F3n\ del\ usuario.\r\n
 comment3.params=
 comment3.target=void\ render()
+comment3.text=\r\n\ Actualiza\ la\ representaci\u00F3n\ visual\ del\ bot\u00F3n.\r\n
 comment4.params=
 comment4.target=void\ configurar()
 numComments=5
