@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=PantallaFinal
+comment1.params=
+comment1.target=PantallaFinal()
+comment1.text=\r\n\ Constructor\ de\ la\ clase\ PantallaFinal.\r\n\ post\:Crea\ una\ pantalla\ final\ del\ juego\ con\ una\ imagen\ de\ \r\n\ \ \ \ \ \ fondo\ y\ agrega\ un\ objeto\ Final.\r\n
+comment2.params=
+comment2.target=void\ act()
+comment2.text=\r\n\ act\:\ M\u00E9todo\ act\ que\ se\ ejecuta\ constantemente\ en\ el\ mundo.\r\n\ post\:\ Agrega\ un\ objeto\ Final\ al\ mundo\ en\ cada\ ciclo\ act.\r\n
+numComments=3
