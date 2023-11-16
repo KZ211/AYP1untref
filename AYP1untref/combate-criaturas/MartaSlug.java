@@ -21,7 +21,7 @@ public class MartaSlug extends Criatura {
                 "Cura a un aliado a cambio de un porcentaje de tu vida" 
             },
             new int[] { 150, 40, 3 },
-            "fuego"
+            "agua"
         );
     }
 

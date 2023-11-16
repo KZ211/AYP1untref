@@ -123,31 +123,13 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaPrincipal
 dependency9.to=GifLoop
 dependency9.type=UsesDependency
-<<<<<<< HEAD
-<<<<<<< HEAD
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=360
-editor.fx.0.y=26
-height=830
-=======
 editor.fx.0.height=739
 editor.fx.0.width=816
-editor.fx.0.x=392
-editor.fx.0.y=54
-height=660
->>>>>>> dcc8707d01f92c8b72f5bc0c9d75afc33a7fc9f0
-package.numDependencies=24
-package.numTargets=16
-=======
-editor.fx.0.height=0
-editor.fx.0.width=0
-editor.fx.0.x=0
-editor.fx.0.y=0
+editor.fx.0.x=552
+editor.fx.0.y=114
 height=916
 package.numDependencies=40
 package.numTargets=24
->>>>>>> ecd1e18032a2c28d8cdaec8f1da5126199f16612
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -331,14 +313,7 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
-<<<<<<< HEAD
-width=1550
-world.lastInstantiated=PantallaDuelo
-xPosition=0
-yPosition=0
-=======
 width=1616
-world.lastInstantiated=PantallaPrincipal
+world.lastInstantiated=PantallaDuelo
 xPosition=206
 yPosition=81
->>>>>>> ecd1e18032a2c28d8cdaec8f1da5126199f16612

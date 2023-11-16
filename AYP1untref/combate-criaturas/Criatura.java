@@ -20,6 +20,7 @@ public abstract class Criatura extends Actor {
     protected int vida;
     protected int tiempoDeEfecto;
     protected int tiempoDeEfectoQuemadura;
+    protected double bonusElemento;
     protected double dañoFormula;
     protected double dañoHecho;
     protected boolean criaturaAtaco;
@@ -209,15 +210,7 @@ public abstract class Criatura extends Actor {
      * @return true si puede realizar el ataque, de lo contrario false.
      */
     public boolean puedeRealizarAtaque4En(Criatura otro){
-<<<<<<< HEAD
-<<<<<<< HEAD
         return !esDelMismoEquipoQue(otro);
-=======
-       return !esDelMismoEquipoQue(otro);
->>>>>>> dcc8707d01f92c8b72f5bc0c9d75afc33a7fc9f0
-=======
-        return !esDelMismoEquipoQue(otro);
->>>>>>> ecd1e18032a2c28d8cdaec8f1da5126199f16612
     }
 
     /**
@@ -227,6 +220,38 @@ public abstract class Criatura extends Actor {
     public double rand(){
         double numeroAleatorio = (double) (Math.random() * (1.25 - 0.5) + 0.5);
         return numeroAleatorio;
+    }
+    
+    protected boolean compararElementos(String a, String b){
+        return a == b;
+    }
+    
+    protected void golpeElemento(Criatura otro){
+        if((compararElementos(this.tipo, "fuego") && 
+            compararElementos(otro.tipo,"agua")) || 
+            (compararElementos(this.tipo, "fuego") && 
+            compararElementos(otro.tipo, "tierra")) ||
+            (compararElementos(this.tipo, "agua")  &&
+            compararElementos(otro.tipo, "tierra")) ||
+            (compararElementos(this.tipo, "tierra") &&
+            compararElementos(otro.tipo, "agua"))){
+            this.bonusElemento = 1.5;
+            System.out.println("Bonus por elemento");
+        }else{
+            if((compararElementos(this.tipo, "fuego") && 
+            compararElementos(otro.tipo,"fuego")) || 
+            (compararElementos(this.tipo, "tierra") && 
+            compararElementos(otro.tipo, "tierra")) ||
+            (compararElementos(this.tipo, "agua")  &&
+            compararElementos(otro.tipo, "agua")) ||
+            (compararElementos(this.tipo, "agua") &&
+            compararElementos(otro.tipo, "fuego")) ||
+            (compararElementos(this.tipo, "tierra") &&
+            compararElementos(otro.tipo, "fuego"))){
+                this.bonusElemento = 1;
+                System.out.println("No hay bonus por elemento");
+            }
+        }
     }
     
     protected double golpeCritico(Criatura otro){
@@ -245,8 +270,9 @@ public abstract class Criatura extends Actor {
      * @return Valor del ataque realizado.
      */
     protected int ataque(int defensa,Criatura otro){
+        this.golpeElemento(otro);
         double dañoAtaque = 2*(1 + defensa/this.estadisticas[1])* 
-            this.rand() * this.golpeCritico(otro);
+            this.rand() * this.golpeCritico(otro) * this.bonusElemento;
         int dañoDelAtaque = (int) dañoAtaque;
         this.dañoFormula = (int) dañoAtaque;
         return dañoDelAtaque;
@@ -282,8 +308,8 @@ public abstract class Criatura extends Actor {
             uiInfoCriatura.actualizar();
             this.tiempoDeEfectoQuemadura--;
             System.out.println(this.nombre + "Esta recibiendo (2) de daño por quemadura, tiempo restante del efecto: (" 
-            + this.tiempoDeEfecto + ") turnos");
-            if(this.tiempoDeEfecto == 0){
+            + this.tiempoDeEfectoQuemadura + ") turnos");
+            if(this.tiempoDeEfectoQuemadura == 0){
                 this.quemaduraActiva = false;
             }
         }
@@ -403,6 +429,7 @@ public abstract class Criatura extends Actor {
         return nombre + " (" + this.getClass().getSimpleName() + ")\n" +
         " - Ataque: " + estadisticas[0] + "\n" +
         " - Defensa: " + estadisticas[1] + "\n" +
-        " - Velocidad: " + estadisticas[2] + "\n";
+        " - Velocidad: " + estadisticas[2] + "\n" +
+        " - Elemento: " + this.tipo + "\n";
     }
 }

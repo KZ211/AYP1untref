@@ -47,27 +47,11 @@ public class SargentoEnrico extends Criatura {
      * @param otro Criatura objetivo del ataque.
      */
     public void atacar2(Criatura otro) {
-<<<<<<< HEAD
-        this.estadisticas[1]*=2;
-        otro.recibirDaño(this);
-
-    }
-
-    public boolean puedeRealizarAtaque2En(Criatura otro) {
-        if(otro.esEquipo1()){
-            return false;    
-          }
-        return true;
-=======
         this.criaturaAtaco = true;
         this.estadisticas[1] /= 1.25;
         this.estadisticas[2] /= 1.25;
-<<<<<<< HEAD
-        super.curacion(otro);
->>>>>>> dcc8707d01f92c8b72f5bc0c9d75afc33a7fc9f0
-=======
+
         this.activarCuracion();
->>>>>>> ecd1e18032a2c28d8cdaec8f1da5126199f16612
     }
 
     /**
