@@ -50,6 +50,7 @@ public class SargentoEnrico extends Criatura {
         this.criaturaAtaco = true;
         this.estadisticas[1] /= 1.25;
         this.estadisticas[2] /= 1.25;
+
         this.activarCuracion();
     }
 

@@ -26,8 +26,14 @@ public class UIInfoCriatura extends Actor {
         GreenfootImage imagenBarra = new GreenfootImage(width - MARGIN * 2, 12);
         imagenBarra.setColor(Color.RED);
 
+<<<<<<< HEAD
         //Barra de vida modificada en base al porcentaje de vida de cada bichito
         imagenBarra.fillRect(0, 0, (int) (criatura.vida*100/criatura.vidaMaxima), 11);
+=======
+
+        // Dibuja la barra de vida proporcional al porcentaje de vida de la criatura
+        imagenBarra.fillRect(0, 0, (int) (criatura.vida * 100 / criatura.vidaMaxima), 11);
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
         imagenBarra.setColor(Color.BLACK);
         imagenBarra.drawRect(0, 0, (int) barraWidth - 1, 11);
 
@@ -41,8 +47,13 @@ public class UIInfoCriatura extends Actor {
         imagen.drawImage(imagenNombre, (width - imagenNombre.getWidth()) / 2, 0);
         imagen.drawImage(imagenBarra, MARGIN, imagenNombre.getHeight());
         imagen.drawImage(imagenVida, (width - imagenVida.getWidth()) / 2,
+<<<<<<< HEAD
             imagenNombre.getHeight() + imagenBarra.getHeight());
 
+=======
+                imagenNombre.getHeight() + imagenBarra.getHeight());
+        // Establece la imagen como el contenido de la interfaz
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
         setImage(imagen);
     }
 }

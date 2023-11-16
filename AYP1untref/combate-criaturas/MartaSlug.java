@@ -21,7 +21,7 @@ public class MartaSlug extends Criatura {
                 "Cura a un aliado a cambio de un porcentaje de tu vida" 
             },
             new int[] { 150, 40, 3 },
-            "fuego"
+            "agua"
         );
     }
 
@@ -52,6 +52,7 @@ public class MartaSlug extends Criatura {
         otro.recibirDaño(this);
         if(this.vida == this.getVidaMaxima()){
             this.vida = this.vida;
+            System.out.println("Curacion: No fue efectiva ya que tienes la vida al maximo");
         }else{
             controlador = otro.recibirDaño(this);
             this.vida += controlador;
@@ -71,10 +72,11 @@ public class MartaSlug extends Criatura {
         this.estadisticas[1] += 3;
         if(this.vida == this.getVidaMaxima()){
             this.vida = this.vida;
+            System.out.println("Curacion: No fue efectiva ya que tienes la vida al maximo");
         }else{
             controlador = otro.recibirDaño(this);
             this.vida += controlador;
-            System.out.println(this.nombre + " se curo, regenerando (" + controlador + ") de su vida");
+            System.out.println("Curacion : "+this.nombre + " se curo, regenerando (" + controlador + ") de su vida");
         }
         uiInfoCriatura.actualizar();
     }
@@ -88,6 +90,7 @@ public class MartaSlug extends Criatura {
         this.criaturaAtaco = true;
         if(otro.vida == otro.getVidaMaxima()){
             otro.vida = otro.vida;
+            System.out.println("Curacion: No fue efectiva ya que tienes la vida al maximo");
         }else{
             controlador = 25;
             otro.vida += controlador;

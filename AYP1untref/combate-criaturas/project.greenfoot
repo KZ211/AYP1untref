@@ -123,11 +123,19 @@ dependency8.type=UsesDependency
 dependency9.from=PantallaPrincipal
 dependency9.to=GifLoop
 dependency9.type=UsesDependency
+<<<<<<< HEAD
 editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
 height=916
+=======
+editor.fx.0.height=1096
+editor.fx.0.width=1936
+editor.fx.0.x=-8
+editor.fx.0.y=-8
+height=1063
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
 package.numDependencies=40
 package.numTargets=24
 project.charset=UTF-8
@@ -300,7 +308,7 @@ target7.x=0
 target7.y=0
 target8.height=70
 target8.name=Boton
-target8.showInterface=false
+target8.showInterface=true
 target8.type=ClassTarget
 target8.width=120
 target8.x=0
@@ -313,7 +321,14 @@ target9.width=120
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1616
 world.lastInstantiated=PantallaPrincipal
 xPosition=206
 yPosition=81
+=======
+width=1300
+world.lastInstantiated=PantallaPrincipal
+xPosition=625
+yPosition=0
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528

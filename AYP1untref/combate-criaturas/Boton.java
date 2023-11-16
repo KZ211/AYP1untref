@@ -15,14 +15,14 @@ public class Boton extends Actor {
     private int forceHeight;
     
     /**
-     * Constructor de la clase Boton.
-     * Crea un botón con un texto, tamaño, color, y acción a realizar al ser clickeado.
-     * @param texto El texto que aparecerá en el botón.
+     * parametro: texto El texto que aparecerá en el botón.
      * @param onClick La acción a ejecutar al ser clickeado.
      * @param size El tamaño del texto del botón.
      * @param color El color del texto del botón.
      * @param width El ancho forzado del botón (0 si se calcula automáticamente).
      * @param height El alto forzado del botón (0 si se calcula automáticamente).
+     * Constructor de la clase Boton.
+     * Crea un botón con un texto, tamaño, color, y acción a realizar al ser clickeado.
      */
     public Boton(String texto, BotonReactor onClick, int size, Color color, int width, int height) {
         this.texto = texto;

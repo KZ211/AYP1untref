@@ -13,12 +13,4 @@ public class Anuncio extends Actor {
         this.imagenOriginal = new GreenfootImage(getImage());
         this.imagenOriginal.scale(this.imagenOriginal.getWidth() / 2, this.imagenOriginal.getHeight() / 2);
     }
-
-    /**
-     * Método act que se ejecuta constantemente en el mundo.
-     * No realiza ninguna acción en este caso.
-     */
-    public void act() {
-        // No realiza ninguna acción en este caso.
-    }
 }

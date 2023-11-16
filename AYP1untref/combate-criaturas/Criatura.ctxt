@@ -22,6 +22,7 @@ comment14.text=\r\n\ Verifica\ si\ la\ criatura\ puede\ realizar\ un\ ataque\ de
 comment15.params=
 comment15.target=double\ rand()
 comment15.text=\r\n\ M\u00E9todo\ que\ genera\ un\ n\u00FAmero\ aleatorio\ entre\ 0.5\ y\ 1.25.\r\n\ @return\ N\u00FAmero\ aleatorio.\r\n
+<<<<<<< HEAD
 comment16.params=otro
 comment16.target=double\ golpeCritico(Criatura)
 comment17.params=defensa\ otro
@@ -39,13 +40,30 @@ comment19.params=otro
 comment19.target=void\ curacionInstantanea(Criatura)
 comment19.text=\r\n\ Realiza\ una\ curaci\u00F3n\ a\ la\ criatura.\r\n\ @param\ otro\ Criatura\ a\ la\ que\ se\ le\ realizar\u00E1\ la\ curaci\u00F3n.\r\n
 >>>>>>> 3e6d5b1bd8b22af28d9144aca53b7e54a93a27bb
+=======
+comment16.params=a\ b
+comment16.target=boolean\ compararElementos(java.lang.String,\ java.lang.String)
+comment16.text=\r\n\ Compara\ dos\ strings\ y\ verifica\ si\ son\ iguales.\r\n\ @param\ a\ Primer\ string\ a\ comparar.\r\n\ @param\ b\ Segundo\ string\ a\ comparar.\r\n\ @return\ true\ si\ los\ strings\ son\ iguales,\ false\ si\ son\ diferentes.\r\n
+comment17.params=otro
+comment17.target=void\ golpeElemento(Criatura)
+comment17.text=\r\n\ Calcula\ si\ hay\ bonificaciones\ de\ da\u00F1o\ basadas\ en\ los\ tipos\ de\ elementos\ de\ las\ criaturas\ involucradas.\r\n\ @param\ otro\ Objeto\ de\ tipo\ Criatura\ que\ representa\ al\ objetivo\ del\ ataque.\r\n
+comment18.params=otro
+comment18.target=double\ golpeCritico(Criatura)
+comment18.text=\r\n\ Verifica\ si\ se\ produce\ un\ golpe\ cr\u00EDtico.\r\n\ @param\ otro\ Objeto\ de\ tipo\ Criatura\ que\ representa\ al\ objetivo\ del\ ataque.\r\n\ @return\ 4\ si\ se\ produce\ un\ golpe\ cr\u00EDtico,\ 1\ si\ no\ se\ produce.\r\n
+comment19.params=defensa\ otro
+comment19.target=int\ ataque(int,\ Criatura)
+comment19.text=\r\n\ Calcula\ el\ ataque\ de\ la\ criatura\ teniendo\ en\ cuenta\ la\ defensa\ del\ objetivo.\r\n\ @param\ defensa\ Defensa\ del\ objetivo.\r\n\ @return\ Valor\ del\ ataque\ realizado.\r\n
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
 comment2.params=world
 comment2.target=void\ addedToWorld(greenfoot.World)
-comment20.params=
-comment20.target=void\ quemadura()
-comment21.params=
-comment21.target=void\ curacion()
+comment20.params=atacante
+comment20.target=int\ recibirDa\u00F1o(Criatura)
+comment20.text=\r\n\ Recibe\ da\u00F1o\ de\ una\ criatura\ atacante.\r\n\ @param\ atacante\ Criatura\ que\ realiza\ el\ ataque.\r\n\ @return\ Valor\ del\ da\u00F1o\ realizado.\r\n
+comment21.params=otro
+comment21.target=void\ curacionInstantanea(Criatura)
+comment21.text=\r\n\ Realiza\ una\ curaci\u00F3n\ a\ la\ criatura.\r\n\ @param\ otro\ Criatura\ a\ la\ que\ se\ le\ realizar\u00E1\ la\ curaci\u00F3n.\r\n
 comment22.params=
+<<<<<<< HEAD
 <<<<<<< HEAD
 comment22.target=double\ getDa\u00F1oFormula()
 comment23.params=
@@ -64,46 +82,61 @@ comment29.params=
 comment29.target=java.lang.String\ getStats()
 =======
 comment22.target=void\ activarQuemadura()
+=======
+comment22.target=void\ quemadura()
+comment22.text=\r\n\ Controla\ el\ efecto\ de\ quemadura\ en\ la\ criatura.\r\n
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
 comment23.params=
-comment23.target=void\ activarCuracion()
+comment23.target=void\ curacion()
+comment23.text=\r\n\ Controla\ el\ efecto\ de\ curaci\u00F3n\ en\ la\ criatura.\r\n
 comment24.params=
-comment24.target=boolean\ getEstadoQuemadura()
+comment24.target=void\ activarQuemadura()
+comment24.text=\r\n\ Activa\ el\ efecto\ de\ quemadura\ en\ la\ criatura.\r\n
 comment25.params=
-comment25.target=int\ getVida()
-comment25.text=\r\n\ Obtiene\ la\ vida\ actual\ de\ la\ criatura.\r\n\ @return\ Vida\ actual\ de\ la\ criatura.\r\n
+comment25.target=void\ activarCuracion()
+comment25.text=\r\n\ Activa\ el\ efecto\ de\ curaci\u00F3n\ en\ la\ criatura.\r\n
 comment26.params=
-comment26.target=int\ getVidaMaxima()
-comment26.text=\r\n\ Obtiene\ el\ valor\ m\u00E1ximo\ de\ vida\ de\ la\ criatura.\r\n\ @return\ Valor\ m\u00E1ximo\ de\ vida\ de\ la\ criatura.\r\n
+comment26.target=boolean\ getEstadoQuemadura()
+comment26.text=\r\n\ Obtiene\ el\ estado\ actual\ de\ la\ quemadura\ de\ la\ criatura.\r\n\ @return\ true\ si\ la\ quemadura\ est\u00E1\ activa,\ false\ si\ no\ lo\ est\u00E1.\r\n
 comment27.params=
-comment27.target=boolean\ getCriaturaAtaco()
-comment27.text=\r\n\ Verifica\ si\ la\ criatura\ ha\ atacado.\r\n\ @return\ true\ si\ la\ criatura\ ha\ atacado,\ de\ lo\ contrario\ false.\r\n
+comment27.target=int\ getVida()
+comment27.text=\r\n\ Obtiene\ la\ vida\ actual\ de\ la\ criatura.\r\n\ @return\ Vida\ actual\ de\ la\ criatura.\r\n
 comment28.params=
-comment28.target=int\ getVelocidad()
+comment28.target=int\ getVidaMaxima()
+comment28.text=\r\n\ Obtiene\ el\ valor\ m\u00E1ximo\ de\ vida\ de\ la\ criatura.\r\n\ @return\ Valor\ m\u00E1ximo\ de\ vida\ de\ la\ criatura.\r\n
 comment29.params=
+<<<<<<< HEAD
 comment29.target=double\ getDa\u00F1oHecho()
 comment29.text=\r\n\ Obtiene\ el\ valor\ del\ da\u00F1o\ realizado\ por\ la\ criatura.\r\n\ @return\ Valor\ del\ da\u00F1o\ realizado.\r\n
 >>>>>>> 3e6d5b1bd8b22af28d9144aca53b7e54a93a27bb
+=======
+comment29.target=boolean\ getCriaturaAtaco()
+comment29.text=\r\n\ Verifica\ si\ la\ criatura\ ha\ atacado.\r\n\ @return\ true\ si\ la\ criatura\ ha\ atacado,\ de\ lo\ contrario\ false.\r\n
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
 comment3.params=
 comment3.target=void\ act()
 comment3.text=\r\n\ M\u00E9todo\ que\ se\ ejecuta\ constantemente\ en\ el\ mundo.\r\n\ Detecta\ interacciones\ del\ mouse\ y\ actualiza\ la\ representaci\u00F3n\ visual\ de\ la\ criatura.\r\n
 comment30.params=
-comment30.target=boolean\ esEquipo1()
-comment30.text=\r\n\ Verifica\ si\ la\ criatura\ pertenece\ al\ equipo\ 1.\r\n\ @return\ true\ si\ la\ criatura\ pertenece\ al\ equipo\ 1,\ de\ lo\ contrario\ false.\r\n
-comment31.params=visualSeleccionado
-comment31.target=void\ setVisualSeleccionado(boolean)
-comment31.text=\r\n\ Establece\ la\ selecci\u00F3n\ visual\ de\ la\ criatura.\r\n\ @param\ visualSeleccionado\ Estado\ de\ selecci\u00F3n\ visual\ de\ la\ criatura.\r\n
-comment32.params=
-comment32.target=java.lang.String\ toString()
-comment32.text=\r\n\ Devuelve\ el\ nombre\ de\ la\ criatura\ como\ representaci\u00F3n\ en\ texto.\r\n\ @return\ Nombre\ de\ la\ criatura.\r\n
+comment30.target=double\ getDa\u00F1oHecho()
+comment30.text=\r\n\ Obtiene\ el\ valor\ del\ da\u00F1o\ realizado\ por\ la\ criatura.\r\n\ @return\ Valor\ del\ da\u00F1o\ realizado.\r\n
+comment31.params=
+comment31.target=boolean\ esEquipo1()
+comment31.text=\r\n\ Verifica\ si\ la\ criatura\ pertenece\ al\ equipo\ 1.\r\n\ @return\ true\ si\ la\ criatura\ pertenece\ al\ equipo\ 1,\ de\ lo\ contrario\ false.\r\n
+comment32.params=visualSeleccionado
+comment32.target=void\ setVisualSeleccionado(boolean)
+comment32.text=\r\n\ Establece\ la\ selecci\u00F3n\ visual\ de\ la\ criatura.\r\n\ @param\ visualSeleccionado\ Estado\ de\ selecci\u00F3n\ visual\ de\ la\ criatura.\r\n
 comment33.params=
-comment33.target=java.lang.String[]\ getNombresAtaque()
-comment33.text=\r\n\ Obtiene\ los\ nombres\ de\ los\ ataques\ disponibles\ de\ la\ criatura.\r\n\ @return\ Arreglo\ con\ los\ nombres\ de\ los\ ataques.\r\n
+comment33.target=java.lang.String\ toString()
+comment33.text=\r\n\ Devuelve\ el\ nombre\ de\ la\ criatura\ como\ representaci\u00F3n\ en\ texto.\r\n\ @return\ Nombre\ de\ la\ criatura.\r\n
 comment34.params=
-comment34.target=java.lang.String[]\ getDetallesAtaque()
-comment34.text=\r\n\ Obtiene\ los\ detalles\ de\ los\ ataques\ disponibles\ de\ la\ criatura.\r\n\ @return\ Arreglo\ con\ los\ detalles\ de\ los\ ataques.\r\n
+comment34.target=java.lang.String[]\ getNombresAtaque()
+comment34.text=\r\n\ Obtiene\ los\ nombres\ de\ los\ ataques\ disponibles\ de\ la\ criatura.\r\n\ @return\ Arreglo\ con\ los\ nombres\ de\ los\ ataques.\r\n
 comment35.params=
-comment35.target=java.lang.String\ getStats()
-comment35.text=\r\n\ Obtiene\ las\ estad\u00EDsticas\ de\ la\ criatura\ en\ forma\ de\ cadena\ de\ texto.\r\n\ @return\ Estad\u00EDsticas\ de\ la\ criatura.\r\n
+comment35.target=java.lang.String[]\ getDetallesAtaque()
+comment35.text=\r\n\ Obtiene\ los\ detalles\ de\ los\ ataques\ disponibles\ de\ la\ criatura.\r\n\ @return\ Arreglo\ con\ los\ detalles\ de\ los\ ataques.\r\n
+comment36.params=
+comment36.target=java.lang.String\ getStats()
+comment36.text=\r\n\ Obtiene\ las\ estad\u00EDsticas\ de\ la\ criatura\ en\ forma\ de\ cadena\ de\ texto.\r\n\ @return\ Estad\u00EDsticas\ de\ la\ criatura.\r\n
 comment4.params=
 comment4.target=void\ render()
 comment4.text=\r\n\ Actualiza\ la\ representaci\u00F3n\ visual\ de\ la\ criatura\ seg\u00FAn\ su\ interacci\u00F3n\ con\ el\ mouse.\r\n
@@ -124,5 +157,9 @@ comment9.target=void\ atacar4(Criatura)
 numComments=30
 =======
 comment9.text=\r\n\ M\u00E9todo\ abstracto\ para\ realizar\ un\ ataque\ de\ tipo\ 4\ a\ otra\ criatura.\r\n\ @param\ otro\ Criatura\ objetivo\ del\ ataque.\r\n
+<<<<<<< HEAD
 numComments=36
 >>>>>>> 3e6d5b1bd8b22af28d9144aca53b7e54a93a27bb
+=======
+numComments=37
+>>>>>>> 6630b9d366ff9446c6150e854f2d6e4105902528
