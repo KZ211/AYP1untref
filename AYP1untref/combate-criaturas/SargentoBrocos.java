@@ -20,7 +20,8 @@ public class SargentoBrocos extends Criatura {
                 "Daña y disminuye la defensa del enemigo", 
                 "Intercambia la vida de un enemigo y la tuya, tu ataque pasa a ser 1 (si la vida de ambos está al máximo no funcionará)" 
             },
-            new int[] { 150, 55, 3 }
+            new int[] { 150, 55, 3 },
+            "tierra"
         );
     }
 

@@ -13,6 +13,7 @@ public abstract class Criatura extends Actor {
     protected final String[] nombresAtaque;
     protected final String[] detallesAtaque;
     protected final int[]    estadisticas;
+    protected final String tipo;
 
     protected final boolean equipo1;
 
@@ -25,7 +26,6 @@ public abstract class Criatura extends Actor {
     protected boolean puedeUtilizarAtaque;
     protected boolean quemaduraActiva;
     protected boolean curacionActiva;
-    protected boolean fueCritico;
 
     protected UIInfoCriatura uiInfoCriatura;
 
@@ -44,7 +44,7 @@ public abstract class Criatura extends Actor {
      * @param detallesAtaque Detalles de los ataques de la criatura.
      * @param estadisticas Estadísticas de la criatura (ataque, defensa, velocidad).
      */
-    public Criatura(String nombre, int vida, String[] nombresAtaque, boolean equipo1, String[] detallesAtaque, int[] estadisticas) {
+    public Criatura(String nombre, int vida, String[] nombresAtaque, boolean equipo1, String[] detallesAtaque, int[] estadisticas, String tipo) {
         // Inicialización de atributos
         this.nombre = nombre;
 
@@ -55,7 +55,6 @@ public abstract class Criatura extends Actor {
         this.puedeUtilizarAtaque = true;
         this.quemaduraActiva = false;
         this.curacionActiva = false;
-        this.fueCritico = false;
         this.tiempoDeEfecto = 3;
         this.tiempoDeEfectoQuemadura = 3;
 
@@ -68,6 +67,7 @@ public abstract class Criatura extends Actor {
 
         this.uiInfoCriatura = new UIInfoCriatura(this);
         this.estadisticas = estadisticas;
+        this.tipo = tipo;
     }
 
     // Métodos abstractos y métodos de interacción de la criatura con el mundo
@@ -223,14 +223,11 @@ public abstract class Criatura extends Actor {
     
     protected double golpeCritico(Criatura otro){
         double numero = Math.random();
-        boolean fueCritico;
         double golpe = 4;
         if(numero > 0.85){
-            this.fueCritico = true;
             System.out.println(otro.nombre + " genero un golpe CRITICO!");
             return golpe;
         }
-        this.fueCritico = false;
         return 1;
     }
     
@@ -337,8 +334,8 @@ public abstract class Criatura extends Actor {
         return this.criaturaAtaco;
     }
     
-    public boolean getFueCritico(){
-        return this.fueCritico;
+    public int getVelocidad(){
+        return this.estadisticas[3];
     }
 
     /**

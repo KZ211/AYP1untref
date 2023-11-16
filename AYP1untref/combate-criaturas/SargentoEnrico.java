@@ -20,7 +20,8 @@ public class SargentoEnrico extends Criatura {
                 "Hace daño y aumenta tu defensa", 
                 "Hace daño al enemigo, intercambiando tu vida por 1 o 2 puntos de ataque" 
             },
-            new int[] { 100, 115, 3 }
+            new int[] { 100, 115, 3 },
+            "agua"
         );
     }
 

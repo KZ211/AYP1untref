@@ -20,7 +20,8 @@ public class MartaSlug extends Criatura {
                 "Aumenta tu ataque y tu defensa en una pequeña proporción, además de curarte", 
                 "Cura a un aliado a cambio de un porcentaje de tu vida" 
             },
-            new int[] { 150, 40, 3 }
+            new int[] { 150, 40, 3 },
+            "fuego"
         );
     }
 

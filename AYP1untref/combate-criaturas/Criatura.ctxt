@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Criatura
 comment0.text=\r\n\ Clase\ abstracta\ que\ representa\ una\ Criatura\ en\ el\ juego.\r\n
-comment1.params=nombre\ vida\ nombresAtaque\ equipo1\ detallesAtaque\ estadisticas
-comment1.target=Criatura(java.lang.String,\ int,\ java.lang.String[],\ boolean,\ java.lang.String[],\ int[])
+comment1.params=nombre\ vida\ nombresAtaque\ equipo1\ detallesAtaque\ estadisticas\ tipo
+comment1.target=Criatura(java.lang.String,\ int,\ java.lang.String[],\ boolean,\ java.lang.String[],\ int[],\ java.lang.String)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Criatura.\r\n\ @param\ nombre\ Nombre\ de\ la\ criatura.\r\n\ @param\ vida\ Puntos\ de\ vida\ de\ la\ criatura.\r\n\ @param\ nombresAtaque\ Nombres\ de\ los\ ataques\ de\ la\ criatura.\r\n\ @param\ equipo1\ Indica\ si\ la\ criatura\ pertenece\ al\ equipo\ 1\ o\ no.\r\n\ @param\ detallesAtaque\ Detalles\ de\ los\ ataques\ de\ la\ criatura.\r\n\ @param\ estadisticas\ Estad\u00EDsticas\ de\ la\ criatura\ (ataque,\ defensa,\ velocidad).\r\n
 comment10.params=otro
 comment10.target=boolean\ esDelMismoEquipoQue(Criatura)
@@ -55,7 +55,7 @@ comment27.params=
 comment27.target=boolean\ getCriaturaAtaco()
 comment27.text=\r\n\ Verifica\ si\ la\ criatura\ ha\ atacado.\r\n\ @return\ true\ si\ la\ criatura\ ha\ atacado,\ de\ lo\ contrario\ false.\r\n
 comment28.params=
-comment28.target=boolean\ getFueCritico()
+comment28.target=int\ getVelocidad()
 comment29.params=
 comment29.target=double\ getDa\u00F1oHecho()
 comment29.text=\r\n\ Obtiene\ el\ valor\ del\ da\u00F1o\ realizado\ por\ la\ criatura.\r\n\ @return\ Valor\ del\ da\u00F1o\ realizado.\r\n

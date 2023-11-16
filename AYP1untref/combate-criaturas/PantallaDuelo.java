@@ -92,7 +92,6 @@ public class PantallaDuelo extends World {
         turno = 0;
         ronda();
         }
-        
         //Cuando el jugador esta muerto lo saltea y si es el ultimo
         //inicia otra ronda
         if(criaturas[personaje].vida == 0){
@@ -111,7 +110,7 @@ public class PantallaDuelo extends World {
         for (int i = 0; i < criaturas.length; i++) {
             criaturas[i].setVisualSeleccionado(false);
             if(criaturas[i].vida == 0){
-            System.out.println(criaturas[i].nombre + " Murio");
+            System.out.println(criaturas[i].nombre + " Murio!");
             removeObject(this.criaturas[i]);
             removeObject(this.gifLoop[i]);
             personajesMuertos++;

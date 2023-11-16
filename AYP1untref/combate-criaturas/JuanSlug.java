@@ -20,7 +20,8 @@ public class JuanSlug extends Criatura {
                 "Daña al enemigo, activandole un efecto de quemadura que le durara 3 turnos y aumenta tu defensa",
                 "Hay una gran probabilidad de que falle y hacerte daño por el contrataque. Pero también puedes causar daño verdadero igual a la mitad de tu ataque a un enemigo" 
             },
-            new int[] { 115, 80, 3 }
+            new int[] { 115, 80, 3 },
+            "fuego"
         );
     }
 
